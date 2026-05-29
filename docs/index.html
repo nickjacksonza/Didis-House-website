@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Didi's House | Home Recording Studio in Randburg (Kensington B) — R700/hr</title>
-    <meta name="description" content="A small, semi-professional recording studio in Kensington B, Randburg. Treated booth, AKG & Shure mics, Audient iD14. Good for voice over, audiobooks, music, podcasts and rehearsal. From R700/hour, bring your own laptop.">
-    <meta name="keywords" content="recording studio Randburg, affordable recording studio Johannesburg, voice over studio Randburg, audiobook recording Johannesburg, podcast recording space Randburg, affordable recording studio Kensington B">
+    <meta name="description" content="A small, semi-professional recording studio in Kensington B, Randburg. Treated booth, AKG & Shure mics, Audient iD14. Good for voice over, audiobooks, music, podcasts and content creation.">
+    <meta name="keywords" content="recording studio Randburg, affordable recording studio Johannesburg, voice over studio Randburg, audiobook recording Johannesburg, podcast recording space Randburg, music recording studio Johannesburg, content creator studio Randburg">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,14 @@
       "@id": "https://didishouse.co.za/#business",
       "name": "Didi's House Recording Studio",
       "alternateName": "Didi's House",
-      "description": "A small, independently run recording studio in Kensington B, Randburg. A treated booth with good microphones and an audio interface, available by the hour for voice over, audiobooks, music, podcasts and rehearsal. Bring your own laptop.",
+      "description": "A small, independently run recording studio in Kensington B, Randburg. A treated booth with good microphones and an audio interface, available by the hour for voice over, audiobooks, music, podcasts and content creation.",
       "slogan": "A small recording studio in Kensington B, Randburg",
       "image": [
-        "https://didishouse.co.za/images/studio-hero.jpg",
-        "https://didishouse.co.za/images/recording-booth.jpg",
-        "https://didishouse.co.za/images/equipment.jpg"
+        "https://didishouse.co.za/docs/Audient-ID14.webp",
+        "https://didishouse.co.za/docs/AKG-P220-Condenser-Mic.webp",
+        "https://didishouse.co.za/docs/Shure-sm58-vocal-microphone.webp"
       ],
-      "logo": "https://didishouse.co.za/images/logo.png",
+      "logo": "https://didishouse.co.za/docs/Audient-ID14.webp",
       "url": "https://didishouse.co.za",
       "telephone": "+27-XX-XXX-XXXX",
       "email": "info@didishouse.co.za",
@@ -314,7 +314,7 @@
           "name": "What equipment is included in the studio rental?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The hourly rate includes everything in the room: an AKG P220 condenser mic, Shure SM58 and 2x SV200 dynamic mics, an Audient iD14 audio interface, Audio Technica ATH-M20X headphones, an Akai MPK Mini MK3 MIDI controller, a treated booth, plus mic stands, XLR cables, a pop filter and a shock mount."
+            "text": "The hourly rate includes everything in the room: an AKG P220 condenser mic, Shure SM58 and 2x SV200 dynamic mics, an Audient iD14 audio interface, Audio Technica ATH-M20X headphones, and a treated recording booth. Just bring your laptop and DAW."
           }
         },
         {
@@ -322,7 +322,7 @@
           "name": "Do I need to bring my own laptop?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, please bring your own laptop with whatever DAW you like to use (Reaper, Audacity, Logic, Pro Tools and so on). If you need a hand with a simple recording or basic editing, just ask and I will do what I can."
+            "text": "Yes, please bring your own laptop with whatever DAW you like to use (Reaper, Audacity, Logic, Pro Tools and so on). If you need a hand with a simple recording or basic editing, just ask and I'll help."
           }
         },
         {
@@ -354,7 +354,7 @@
           "name": "What areas do you serve?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The studio is in Kensington B, Randburg, and is easy to reach from Sandton, Northcliff, Rosebank, Fourways, Bryanston, Parkhurst, Parktown North, Melville and the rest of Johannesburg North."
+            "text": "The studio is in Kensington B, Randburg, and is easy to reach from Sandton, Northcliff, Rosebank, Fourways, Bryanston, Parkhurst, Parktown North, Melville and the rest of Johannesburg."
           }
         }
       ]
@@ -446,7 +446,7 @@
             z-index: 9999;
             pointer-events: none;
             opacity: 0.035;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='50'/%3E%3C/filter%3E%3Crect width='160' height='160' fill='%23faf3e6' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
         /* ===== FLOATING NAVIGATION ===== */
@@ -998,471 +998,139 @@
         .offer-card {
             background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
             border-radius: 12px;
-            padding: 48px 32px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .offer-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-        }
-
-        .offer-card-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .offer-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.15);
+            padding: 40px 32px;
             color: var(--color-white);
-            border: 1px solid rgba(255,255,255,0.3);
-            padding: 6px 14px;
-            border-radius: 3px;
-            font-family: var(--font-mono);
-            font-size: 0.76rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            margin-bottom: 20px;
-        }
-
-        .offer-title {
-            font-family: var(--font-display);
-            font-weight: 800;
-            font-size: clamp(2rem, 4vw, 3rem);
-            letter-spacing: -0.02em;
-            color: var(--color-white);
-            margin-bottom: 8px;
-        }
-
-        .offer-subtitle {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 16px;
-        }
-
-        .offer-description {
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 500px;
-            margin: 0 auto 24px;
-        }
-
-        .offer-price {
-            font-family: var(--font-mono);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-white);
-            opacity: 0.95;
-        }
-
-        /* ===== SERVICES GRID ===== */
-        .services-grid {
-            display: grid;
-            gap: 24px;
-        }
-
-        .service-card {
-            background: var(--color-white);
-            border-radius: 8px;
-            padding: 32px 28px;
-            box-shadow: var(--shadow-soft);
-            border-top: 3px solid var(--color-accent);
-            transition: all var(--transition-fast);
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
+            margin-top: 32px;
             box-shadow: var(--shadow-lift);
+            border: none;
         }
 
-        .service-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--color-gray-200);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+        .offer-card .pricing-amount {
+            color: var(--color-white);
         }
 
-        .service-title {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            letter-spacing: -0.015em;
-            margin-bottom: 12px;
-            color: var(--color-black);
+        .offer-card .pricing-period {
+            color: rgba(255, 255, 255, 0.85);
         }
 
-        .service-description {
-            color: var(--color-gray-600);
-            font-size: 1rem;
-            line-height: 1.7;
+        .offer-card .pricing-card-header {
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .offer-card .pricing-features li {
+            border-bottom-color: rgba(255, 255, 255, 0.15);
+            color: var(--color-white);
+        }
+
+        .offer-card .pricing-check {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         /* ===== EQUIPMENT SECTION ===== */
-        .equipment-showcase {
-            display: grid;
-            gap: 60px;
-        }
-
         .equipment-category {
-            background: var(--color-white);
-            border-radius: 16px;
-            padding: 40px 32px;
-            box-shadow: var(--shadow-soft);
+            margin-bottom: 60px;
         }
 
         .equipment-category-header {
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 32px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--color-accent);
+            margin-bottom: 40px;
         }
 
         .equipment-category-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--color-black);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
         }
 
         .equipment-category-title {
             font-family: var(--font-display);
+            font-weight: 800;
             font-size: 1.8rem;
-            letter-spacing: -0.015em;
+            color: var(--color-accent);
         }
 
         .equipment-grid {
             display: grid;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
         }
 
         .equipment-item {
-            display: grid;
-            gap: 20px;
-            padding: 20px;
-            background: var(--color-gray-100);
+            background: var(--color-white);
             border-radius: 12px;
-            transition: all var(--transition-fast);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
         }
 
         .equipment-item:hover {
-            background: var(--color-gray-200);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lift);
         }
 
         .equipment-image {
-            aspect-ratio: 4/3;
-            background: linear-gradient(135deg, var(--color-gray-200) 0%, var(--color-gray-300) 100%);
-            border-radius: 8px;
+            position: relative;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--color-gray-100) 0%, var(--color-gray-200) 100%);
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            color: var(--color-gray-600);
-            border: 2px dashed var(--color-gray-300);
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        .equipment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .equipment-image-icon {
-            font-size: 2rem;
+            font-size: 3rem;
             opacity: 0.6;
         }
 
         .equipment-image-text {
-            font-size: 0.8rem;
-            opacity: 0.7;
+            font-size: 0.9rem;
+            color: var(--color-gray-600);
+            font-weight: 600;
+        }
+
+        .equipment-info {
+            padding: 24px;
         }
 
         .equipment-info h4 {
             font-family: var(--font-display);
-            font-size: 1.25rem;
-            letter-spacing: -0.015em;
-            margin-bottom: 6px;
-        }
-
-        .equipment-info p {
-            color: var(--color-gray-600);
-            font-size: 0.95rem;
-        }
-
-        /* Amenities List */
-        .amenities-grid {
-            display: grid;
-            gap: 16px;
-        }
-
-        .amenity-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 16px 20px;
-            background: var(--color-gray-100);
-            border-radius: 8px;
-        }
-
-        .amenity-icon {
-            font-size: 1.5rem;
-        }
-
-        .amenity-text strong {
-            display: block;
-            font-size: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
             color: var(--color-black);
         }
 
-        .amenity-text span {
-            font-size: 0.9rem;
+        .equipment-info p {
+            font-size: 0.95rem;
             color: var(--color-gray-600);
-        }
-
-        /* ===== GALLERY SECTION ===== */
-        .gallery-grid {
-            display: grid;
-            gap: 16px;
-        }
-
-        .gallery-item {
-            position: relative;
-            aspect-ratio: 4/3;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            color: var(--color-gray-300);
-            border: 2px dashed rgba(255, 255, 255, 0.2);
-        }
-
-        .gallery-item.featured {
-            aspect-ratio: 16/9;
-        }
-
-        .gallery-icon {
-            font-size: 2.5rem;
-            opacity: 0.5;
-        }
-
-        .gallery-label {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .gallery-size {
-            font-size: 0.75rem;
-            opacity: 0.5;
-        }
-
-        /* ===== BOOKING SECTION ===== */
-        .booking-content {
-            text-align: center;
-        }
-
-        .booking-hours {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            letter-spacing: -0.015em;
-            margin-bottom: 12px;
-        }
-
-        .booking-location {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .contact-grid {
-            display: grid;
-            gap: 16px;
-            max-width: 600px;
-            margin: 0 auto 60px;
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 20px 32px;
-            background: rgba(250, 243, 230, 0.08);
-            color: var(--color-white);
-            border: 1px solid rgba(250, 243, 230, 0.22);
-            border-radius: 6px;
-            text-decoration: none;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            transition: all var(--transition-fast);
-        }
-
-        .contact-btn:hover {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            transform: translateY(-2px);
-        }
-
-        .contact-btn-icon {
-            font-size: 1.3rem;
-        }
-
-        /* ===== REVIEWS SECTION ===== */
-        .reviews-card {
-            background: var(--color-white);
-            border-radius: 16px;
-            padding: 48px 32px;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            border-top: 3px solid var(--color-accent);
-        }
-
-        .reviews-stars {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            letter-spacing: 4px;
-        }
-
-        .reviews-title {
-            font-family: var(--font-display);
-            font-weight: 800;
-            font-size: 1.7rem;
-            letter-spacing: -0.015em;
-            margin-bottom: 16px;
-        }
-
-        .reviews-text {
-            color: var(--color-gray-600);
-            margin-bottom: 32px;
-        }
-
-        .reviews-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 400px;
-            margin: 0 auto;
+            line-height: 1.5;
         }
 
         /* ===== FOOTER ===== */
-        .footer {
+        footer {
             background: var(--color-black);
             color: var(--color-white);
-            padding: 60px 20px 40px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 60px 20px;
             text-align: center;
-        }
-
-        .footer-logo {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            letter-spacing: -0.01em;
-            margin-bottom: 16px;
-        }
-
-        .footer-logo-accent {
-            color: var(--color-accent);
-        }
-
-        .footer-tagline {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 8px;
-        }
-
-        .footer-services {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-            margin-bottom: 32px;
-        }
-
-        .footer-copyright {
-            padding-top: 32px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.5);
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.75;
         }
 
         /* ===== RESPONSIVE ===== */
-        @media (min-width: 640px) {
-            .hero-actions {
-                flex-direction: row;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .equipment-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .equipment-item {
-                grid-template-columns: 140px 1fr;
-                align-items: center;
-            }
-
-            .amenities-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery-item.featured {
-                grid-column: span 2;
-            }
-
-            .contact-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .reviews-buttons {
-                flex-direction: row;
-            }
-        }
-
         @media (min-width: 768px) {
-            .section {
-                padding: 100px 40px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .equipment-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
             .nav-links {
                 display: flex;
             }
@@ -1475,78 +1143,57 @@
                 display: none;
             }
 
-            .hero {
-                padding: calc(var(--nav-height) + 80px) 40px 100px;
+            .nav-mobile {
+                display: none;
             }
 
-            .services-grid {
+            .hero-actions {
+                flex-direction: row;
+                gap: 16px;
+            }
+
+            .pricing-card,
+            .offer-card {
+                margin-bottom: 0;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .equipment-grid {
                 grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section {
+                padding: 100px 40px;
             }
 
             .equipment-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
-
-            .equipment-item {
-                grid-template-columns: 1fr;
-            }
-
-            .equipment-image {
-                aspect-ratio: 3/2;
-            }
-        }
-
-        .equipment-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 8px;
-            background: var(--color-white);
-            padding: 8px;
-        }
-
-        /* ===== REDUCED MOTION ===== */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-
-        /* ===== PRINT ===== */
-        @media print {
-            .nav, .hero-bg, .btn-primary, .btn-secondary {
-                display: none;
-            }
-
-            body {
-                color: #000;
-                background: #fff;
-            }
         }
     </style>
 </head>
 <body>
-
-    <!-- ===== FLOATING NAVIGATION ===== -->
-    <nav class="nav" id="nav">
+    <!-- Navigation -->
+    <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">DIDI'S <span class="nav-logo-accent">HOUSE</span></a>
-
+            <a href="#" class="nav-logo">
+                Didi<span class="nav-logo-accent">'s House</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#equipment">Equipment</a></li>
-                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
             <div class="nav-cta">
-                <a href="#booking" class="btn-primary">Book Now</a>
+                <button class="btn-primary">Book Studio</button>
             </div>
-
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -1554,427 +1201,357 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Navigation -->
     <div class="nav-mobile" id="navMobile">
         <ul class="nav-mobile-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#equipment">Equipment</a></li>
-            <li><a href="#booking">Booking</a></li>
-            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-mobile-cta">
-            <a href="#booking" class="btn-primary">Book Your Session</a>
+            <button class="btn-primary">Book Studio</button>
         </div>
     </div>
 
-    <!-- ===== HERO SECTION ===== -->
-    <header class="hero" id="home">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-bg">
             <div class="hero-bg-image">
-                <span class="placeholder-icon">🎙️</span>
-                <span class="placeholder-text">Hero Image: Studio Interior<br>Recommended: 1920x1080px</span>
+                <div class="placeholder-icon">🎙️</div>
+                <div class="placeholder-text">Professional Recording Studio</div>
             </div>
             <div class="hero-bg-overlay"></div>
         </div>
 
         <div class="hero-content">
-            <span class="hero-badge">FROM R700/HOUR</span>
+            <span class="hero-badge">Recording Studio</span>
             <h1 class="hero-title">
-                A RECORDING<br>
-                STUDIO IN<br>
-                <span class="hero-title-accent">RANDBURG</span>
+                Affordable Studio <span class="hero-title-accent">in Randburg</span>
             </h1>
-            <p class="hero-subtitle">A <em>semi</em>-professional recording studio in Kensington B, Randburg. Bring a laptop, everything else is ready.</p>
+            <p class="hero-subtitle">
+                R700/hr • Treated booth • Professional gear • Bring your laptop
+            </p>
 
             <div class="hero-features">
-                <span class="hero-feature">
-                    <span class="hero-feature-dot"></span>
-                    AKG & Shure microphones
-                </span>
-                <span class="hero-feature">
-                    <span class="hero-feature-dot"></span>
-                    Audient iD14 interface
-                </span>
-                <span class="hero-feature">
-                    <span class="hero-feature-dot"></span>
-                    Treated booth
-                </span>
-                <span class="hero-feature">
-                    <span class="hero-feature-dot"></span>
-                    Bring your own laptop
-                </span>
+                <div class="hero-feature">
+                    <div class="hero-feature-dot"></div>
+                    AKG P220 Condenser Mic
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-dot"></div>
+                    Shure SM58 Dynamic Mic
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-dot"></div>
+                    Audient iD14 Interface
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-dot"></div>
+                    Free Parking & WiFi
+                </div>
             </div>
 
             <div class="hero-actions">
-                <a href="#booking" class="btn-primary">
-                    Get in touch
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-                <a href="tel:+27XXXXXXXXX" class="btn-secondary">
-                    Call Us
-                </a>
+                <button class="btn-primary">📅 Book a Session</button>
+                <button class="btn-secondary">📞 Contact Us</button>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- About Section -->
     <section class="section section-gray" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">The Space</span>
-                <h2 class="section-title">A recording studio in Kensington B</h2>
-                <p class="section-subtitle">Treated booth, good mics, hourly bookings. Full equipment list below.</p>
+                <span class="section-label">About</span>
+                <h2 class="section-title">Why Choose Didi's House?</h2>
+                <p class="section-subtitle">
+                    A quiet, affordable, and welcoming space for voice over, audiobooks, music, podcasts, and content creation.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <span class="pricing-amount">🎙️</span>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: var(--color-black);">Voice Over & Narration</h3>
+                    <p style="color: var(--color-gray-600); line-height: 1.6;">
+                        Clean, professional voice overs for e-learning, commercials, corporate videos, and audiobook narration. Acoustically treated for broadcast-quality sound.
+                    </p>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <span class="pricing-amount">🎵</span>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: var(--color-black);">Music & Singing</h3>
+                    <p style="color: var(--color-gray-600); line-height: 1.6;">
+                        Record vocal ideas, demos, and songs. Use our Akai MPK Mini for MIDI production. Bring your DAW and create on your terms.
+                    </p>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <span class="pricing-amount">🎙️</span>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: var(--color-black);">Podcasts & Content</h3>
+                    <p style="color: var(--color-gray-600); line-height: 1.6;">
+                        Record podcast episodes, YouTube videos, TikToks, and social media audio. WiFi and coffee included.
+                    </p>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <span class="pricing-amount">🌍</span>
+                    </div>
+                    <h3 style="margin-bottom: 16px; color: var(--color-black);">Vernacular Languages</h3>
+                    <p style="color: var(--color-gray-600); line-height: 1.6;">
+                        50% discount for audiobooks in Zulu, Xhosa, Sotho, Tswana, or any South African indigenous language. Supporting local voices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="section section-dark" id="equipment">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Gear</span>
+                <h2 class="section-title">Professional Equipment</h2>
+                <p class="section-subtitle">
+                    Broadcast-quality microphones, interfaces, and monitoring.
+                </p>
+            </div>
+
+            <div class="equipment-category">
+                <div class="equipment-category-header">
+                    <div class="equipment-category-icon">🎛️</div>
+                    <h3 class="equipment-category-title">Recording Gear</h3>
+                </div>
+
+                <div class="equipment-grid">
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <img src="Audient-ID14.webp" alt="Audient iD14 Audio Interface">
+                        </div>
+                        <div class="equipment-info">
+                            <h4>Audient iD14</h4>
+                            <p>Class-leading preamps, pristine AD/DA conversion</p>
+                        </div>
+                    </div>
+
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <img src="AKG-P220-Condenser-Mic.webp" alt="AKG P220 Condenser Microphone">
+                        </div>
+                        <div class="equipment-info">
+                            <h4>AKG P220</h4>
+                            <p>True condenser, detailed studio-quality vocal capture</p>
+                        </div>
+                    </div>
+
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <img src="Shure-sm58-vocal-microphone.webp" alt="Shure SM58 Dynamic Microphone">
+                        </div>
+                        <div class="equipment-info">
+                            <h4>Shure SM58 + 2x SV200</h4>
+                            <p>Versatile dynamic options for any voice type</p>
+                        </div>
+                    </div>
+
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <img src="Akai-professional-mpk-mini-mk3-black.webp" alt="Akai MPK Mini MK3 MIDI Controller">
+                        </div>
+                        <div class="equipment-info">
+                            <h4>Akai MPK Mini MK3</h4>
+                            <p>MIDI controller for producers and beatmakers</p>
+                        </div>
+                    </div>
+
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <img src="AT-ATH-M20x.webp" alt="Audio Technica ATH-M20X Headphones">
+                        </div>
+                        <div class="equipment-info">
+                            <h4>Audio Technica ATH-M20X</h4>
+                            <p>Closed-back studio monitors</p>
+                        </div>
+                    </div>
+
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <span class="equipment-image-icon">🎵</span>
+                            <span class="equipment-image-text">Additional Gear</span>
+                        </div>
+                        <div class="equipment-info">
+                            <h4>Sony MDR-CD270</h4>
+                            <p>Additional monitoring headphones</p>
+                        </div>
+                    </div>
+
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <span class="equipment-image-icon">🎙️</span>
+                            <span class="equipment-image-text">Treated Booth</span>
+                        </div>
+                        <div class="equipment-info">
+                            <h4>Treated Booth</h4>
+                            <p>Broadcast-quality, noise-free sound</p>
+                        </div>
+                    </div>
+
+                    <div class="equipment-item">
+                        <div class="equipment-image">
+                            <span class="equipment-image-icon">📶</span>
+                            <span class="equipment-image-text">WiFi & Coffee</span>
+                        </div>
+                        <div class="equipment-info">
+                            <h4>Amenities</h4>
+                            <p>Free WiFi, coffee, tea, parking & breaks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Pricing</span>
+                <h2 class="section-title">Hourly Rates</h2>
+                <p class="section-subtitle">
+                    Affordable studio rental for professionals and creators.
+                </p>
             </div>
 
             <div class="about-grid">
                 <div class="pricing-card">
                     <div class="pricing-card-header">
                         <span class="pricing-amount">R700</span>
-                        <span class="pricing-period">per hour</span>
+                        <span class="pricing-period">/hr</span>
                     </div>
                     <ul class="pricing-features">
                         <li>
                             <span class="pricing-check">✓</span>
-                            AKG P220 condenser & Shure dynamic microphones
+                            Acoustically treated booth
                         </li>
                         <li>
                             <span class="pricing-check">✓</span>
-                            Audient iD14 audio interface
+                            AKG P220 condenser mic
                         </li>
                         <li>
                             <span class="pricing-check">✓</span>
-                            Audio Technica ATH-M20X headphones
+                            Shure SM58 + SV200 mics
                         </li>
                         <li>
                             <span class="pricing-check">✓</span>
-                            Treated booth, WiFi, coffee & tea
+                            Audient iD14 interface
                         </li>
                         <li>
                             <span class="pricing-check">✓</span>
-                            You bring the laptop and DAW; basic editing on request
+                            Studio headphones
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            Free WiFi & parking
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            Coffee & tea
                         </li>
                     </ul>
-                    <a href="#booking" class="btn-dark" style="width: 100%; justify-content: center;">
-                        Book Your Session
-                    </a>
+                    <button class="btn-dark">Book Now</button>
                 </div>
 
                 <div class="offer-card">
-                    <div class="offer-card-content">
-                        <span class="offer-badge">SPECIAL RATE</span>
-                        <h3 class="offer-title">50% OFF</h3>
-                        <p class="offer-subtitle">SA Indigenous Language Audiobooks</p>
-                        <p class="offer-description">Recording an audiobook in Zulu, Xhosa, Sotho, Tswana, or another South African language? It's half price. I'd like to see more of these stories recorded.</p>
-                        <p class="offer-price">R350/HOUR</p>
+                    <div class="pricing-card-header">
+                        <span class="pricing-amount">R350</span>
+                        <span class="pricing-period">/hr</span>
                     </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            50% Discount
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            Zulu, Xhosa, Sotho, Tswana
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            Any South African language
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            All equipment included
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            Same professional quality
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            Supporting local voices
+                        </li>
+                        <li>
+                            <span class="pricing-check">✓</span>
+                            Limited offer
+                        </li>
+                    </ul>
+                    <button class="btn-secondary">Book Discounted Rate</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
-    <section class="section" id="services">
+    <!-- Footer -->
+    <footer id="contact">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Who It Suits</span>
-                <h2 class="section-title">Who records here</h2>
-                <p class="section-subtitle">Best for people who know what they want to record and just need the right room to do it.</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎵</div>
-                    <h3 class="service-title">Musicians & Producers</h3>
-                    <p class="service-description">Good mics, treated booth, hourly bookings. Bring a laptop and your DAW.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎙️</div>
-                    <h3 class="service-title">Voice Over Artists & Agencies</h3>
-                    <p class="service-description">A quiet, treated room for commercial, e-learning and corporate VO. Single-session bookings available.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📚</div>
-                    <h3 class="service-title">Authors & Audiobook Narrators</h3>
-                    <p class="service-description">Recording your own book or someone else's? The booth holds up over long sessions, and South African language audiobooks are half price.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎧</div>
-                    <h3 class="service-title">Podcasters</h3>
-                    <p class="service-description">A calm spot to record an episode without traffic and dogs in the background. Better for solo and small setups than a busy commercial room.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎭</div>
-                    <h3 class="service-title">Actors & Performers</h3>
-                    <p class="service-description">Run lines, rehearse songs for a musical, or record an audition tape somewhere quiet. Book it by the hour, no strings.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3 class="service-title">Content Creators</h3>
-                    <p class="service-description">Clean voice over and narration for Johannesburg creators. Hourly rates, easy to reach.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 48px;">
-                <a href="#booking" class="btn-primary">Get in touch</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== EQUIPMENT SECTION ===== -->
-    <section class="section section-gray" id="equipment">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">The Gear</span>
-                <h2 class="section-title">What's in the room</h2>
-                <p class="section-subtitle">Everything listed below is included in the hourly rate. Bring a laptop with your DAW of choice.</p>
-            </div>
-
-            <div class="equipment-showcase">
-                <!-- Recording Gear -->
-                <div class="equipment-category">
-                    <div class="equipment-category-header">
-                        <div class="equipment-category-icon">🎛️</div>
-                        <h3 class="equipment-category-title">Recording Gear</h3>
-                    </div>
-
-                    <div class="equipment-grid">
-                        <div class="equipment-item">
-                            <div class="equipment-image">
-                                <img src="AudientID14.webp" alt="Audient iD14 Audio Interface" loading="lazy">
-                            </div>
-                            <div class="equipment-info">
-                                <h4>Audient iD14</h4>
-                                <p>Audio interface with clean preamps and solid conversion</p>
-                            </div>
-                        </div>
-
-                        <div class="equipment-item">
-                            <div class="equipment-image">
-                                <img src="AKG_P220_Condenser_Mic.webp" alt="AKG P220 Condenser Microphone" loading="lazy">
-                            </div>
-                            <div class="equipment-info">
-                                <h4>AKG P220</h4>
-                                <p>Large diaphragm condenser, good for voice and acoustic instruments</p>
-                            </div>
-                        </div>
-
-                        <div class="equipment-item">
-                            <div class="equipment-image">
-                                <img src="Shuresm58vocalmicrophone.webp" alt="Shure SM58 Dynamic Microphone" loading="lazy">
-                            </div>
-                            <div class="equipment-info">
-                                <h4>Shure SM58 + 2x SV200</h4>
-                                <p>Dynamic options if you prefer a different character to the condenser</p>
-                            </div>
-                        </div>
-
-                        <div class="equipment-item">
-                            <div class="equipment-image">
-                                <img src="Akaiprofessionalmpkminimk3black.webp" alt="Akai MPK Mini MK3 MIDI Controller" loading="lazy">
-                            </div>
-                            <div class="equipment-info">
-                                <h4>Akai MPK Mini MK3</h4>
-                                <p>MIDI controller for producers and beatmakers</p>
-                            </div>
-                        </div>
-
-                        <div class="equipment-item">
-                            <div class="equipment-image">
-                                <img src="ATATHM20x.webp" alt="Audio Technica ATH-M20X Studio Headphones" loading="lazy">
-                            </div>
-                            <div class="equipment-info">
-                                <h4>Audio Technica ATH-M20X</h4>
-                                <p>Closed-back headphones for monitoring in the booth</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Amenities -->
-                <div class="equipment-category">
-                    <div class="equipment-category-header">
-                        <div class="equipment-category-icon">✨</div>
-                        <h3 class="equipment-category-title">Studio Amenities</h3>
-                    </div>
-
-                    <div class="amenities-grid">
-                        <div class="amenity-item">
-                            <span class="amenity-icon">☕</span>
-                            <div class="amenity-text">
-                                <strong>Coffee & Tea</strong>
-                                <span>Included, always on.</span>
-                            </div>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="amenity-icon">📶</span>
-                            <div class="amenity-text">
-                                <strong>WiFi</strong>
-                                <span>Fast enough for remote sessions and large file transfers</span>
-                            </div>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="amenity-icon">🚗</span>
-                            <div class="amenity-text">
-                                <strong>Parking</strong>
-                                <span>Off-street, no charge</span>
-                            </div>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="amenity-icon">🌳</span>
-                            <div class="amenity-text">
-                                <strong>Garden</strong>
-                                <span>Good spot to take a break between takes</span>
-                            </div>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="amenity-icon">🌅</span>
-                            <div class="amenity-text">
-                                <strong>Rooftop Deck</strong>
-                                <span>Get some air when you need it</span>
-                            </div>
-                        </div>
-                        <div class="amenity-item">
-                            <span class="amenity-icon">🚿</span>
-                            <div class="amenity-text">
-                                <strong>Restroom</strong>
-                                <span>Private, on site</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ===== BOOKING SECTION ===== -->
-    <section class="section section-dark" id="booking">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Get in Touch</span>
-                <h2 class="section-title" style="color: var(--color-white);">Want to book a session?</h2>
-            </div>
-
-            <div class="booking-content">
-                <p class="booking-hours">Weekdays, 8am to 5pm</p>
-                <p class="booking-location">Kensington B, Randburg — easy to reach from Sandton, Northcliff and Joburg North</p>
-
-                <p style="max-width: 540px; margin: 0 auto 40px; color: rgba(255,255,255,0.7);">Get in touch with details about the session before booking.</p>
-
-                <div class="contact-grid">
-                    <a href="tel:+27XXXXXXXXX" class="contact-btn">
-                        <span class="contact-btn-icon">📞</span>
-                        Call Studio
-                    </a>
-                    <a href="https://wa.me/27XXXXXXXXX" class="contact-btn" target="_blank" rel="noopener">
-                        <span class="contact-btn-icon">💬</span>
-                        WhatsApp
-                    </a>
-                    <a href="mailto:info@didishouse.co.za" class="contact-btn">
-                        <span class="contact-btn-icon">✉️</span>
-                        Email Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== REVIEWS SECTION ===== -->
-    <section class="section section-gray" id="reviews">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Reviews</span>
-                <h2 class="section-title">Early days</h2>
-            </div>
-
-            <div class="reviews-card">
-                <h3 class="reviews-title">This is a new thing I'm building</h3>
-                <p class="reviews-text">Didi's House is just getting going, so there isn't a wall of reviews yet. If you record here and it works out, a few words on Google would mean a lot, and it helps the next person find the place.</p>
-                <div class="reviews-buttons">
-                    <a href="YOUR_GOOGLE_REVIEWS_LINK" class="btn-dark" target="_blank" rel="noopener">Leave a review</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="footer-logo">DIDI'S <span class="footer-logo-accent">HOUSE</span></p>
-            <p class="footer-tagline">A recording studio in Kensington B, Randburg, Gauteng</p>
-            <p class="footer-services">Voice over • Music • Audiobooks • Podcasts • Rehearsal</p>
-            <p class="footer-copyright">© 2025 Didi's House Recording Studio. All rights reserved.</p>
+            <h3 style="margin-bottom: 16px; font-family: var(--font-display);">Get in Touch</h3>
+            <p style="margin-bottom: 24px;">
+                📧 Email: info@didishouse.co.za<br>
+                📍 Location: Kensington B, Randburg, Johannesburg<br>
+                🏠 Web: didishouse.co.za
+            </p>
+            <p style="font-size: 0.85rem; opacity: 0.6;">
+                © 2025 Didi's House Recording Studio. All rights reserved.
+            </p>
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
     <script>
         // Mobile menu toggle
         const navToggle = document.getElementById('navToggle');
         const navMobile = document.getElementById('navMobile');
-        const nav = document.getElementById('nav');
-        const mobileLinks = navMobile.querySelectorAll('a');
 
         navToggle.addEventListener('click', () => {
             navToggle.classList.toggle('active');
             navMobile.classList.toggle('active');
-            document.body.style.overflow = navMobile.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close mobile menu on link click
-        mobileLinks.forEach(link => {
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-mobile-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
                 navMobile.classList.remove('active');
-                document.body.style.overflow = '';
             });
         });
 
-        // Nav scroll effect
-        let lastScroll = 0;
+        // Navigation scroll effect
+        const nav = document.querySelector('.nav');
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 50) {
+            if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
             }
-
-            lastScroll = currentScroll;
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
         });
     </script>
-
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
 </body>
 </html>
