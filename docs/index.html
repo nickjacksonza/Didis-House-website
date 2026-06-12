@@ -1270,7 +1270,32 @@ window.addEventListener('DOMContentLoaded', function () {
   ------------------------------------------------------------------ */
   var glState = { renderer: null, uniforms: null, running: false };
 
-  function initGL() {
+ // function initGL() {
+  var glInitialized = false;
+var heroHeight = document.querySelector('.hero').offsetHeight;
+
+if (hasGsap && !reduceMotion) {
+  ScrollTrigger.create({
+    trigger: '.hero',
+    start: 'bottom top',
+    onEnter: function() {
+      if (!glInitialized) {
+        initGL();
+        document.getElementById('gl').classList.add('on');
+        glInitialized = true;
+      }
+    }
+  });
+} else {
+  // Fallback for no GSAP: simple scroll listener
+  window.addEventListener('scroll', function() {
+    if (!glInitialized && window.scrollY > heroHeight) {
+      initGL();
+      document.getElementById('gl').classList.add('on');
+      glInitialized = true;
+    }
+  }, { passive: true });
+}
     if (!hasThree || reduceMotion) return;
     var canvas = document.getElementById('gl');
     var renderer;
