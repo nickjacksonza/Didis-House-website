@@ -47,8 +47,23 @@
 <link rel="privacy-policy" href="https://recordingstudio.co.za/privacy.html">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,640;1,9..144,420;1,9..144,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="didis-house-outdoor-pic.webp" type="image/webp">
-
-<!-- Google tag (gtag.js) — kept async, moved after charset/viewport -->
+<!-- ===== Consent Mode v2 default-deny. ===== -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'denied',
+    personalization_storage: 'denied',
+    security_storage: 'granted',
+    region: ['ZA'],
+    wait_for_update: 500
+  });
+</script>
+<!-- Google tag (gtag.js) —  async -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXDRQXGGB1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -780,6 +795,30 @@
     .lang-track { animation: none; }
     .scroll-cue::after { animation: none; }
   }
+
+  #cc-banner{
+    position:fixed; left:0; right:0; bottom:0; z-index:9999;
+    background:#0f0f0f; color:#e8e8e8;
+    font-family:'Space Mono', ui-monospace, monospace;
+    font-size:14px; line-height:1.5;
+    padding:18px 20px;
+    border-top:3px solid #d82a3a;
+    box-shadow:0 -8px 24px rgba(0,0,0,.4);
+  }
+  #cc-banner[hidden]{ display:none; }
+  #cc-banner .cc-wrap{
+    max-width:980px; margin:0 auto;
+    display:flex; flex-wrap:wrap; align-items:center; gap:14px;
+  }
+  #cc-banner p{ margin:0; flex:1 1 380px; }
+  #cc-banner a{ color:#d82a3a; }
+  #cc-banner .cc-btns{ display:flex; gap:10px; flex-wrap:wrap; }
+  #cc-banner button{
+    font:inherit; cursor:pointer; padding:9px 16px;
+    border:1px solid #d82a3a; border-radius:2px; white-space:nowrap;
+  }
+  #cc-banner .cc-accept{ background:#d82a3a; color:#fff; }
+  #cc-banner .cc-reject{ background:transparent; color:#e8e8e8; }
 </style>
   <meta name="msvalidate.01" content="4364FE4C110763FD9588A5AB6D7C1676" />
   <!-- Clarity tracking code for https://recordingstudio.co.za/ -->
@@ -1104,7 +1143,19 @@
     </div>
   </div>
 </section>
-
+<div id="cc-banner" hidden role="dialog" aria-label="Cookie consent">
+  <div class="cc-wrap">
+    <p>
+      We use cookies to run this site and measure performance.
+      You can accept or reject non-essential cookies.
+      See our <a href="/privacy.html">privacy policy</a>.
+    </p>
+    <div class="cc-btns">
+      <button class="cc-reject" data-cc="reject">Reject non-essential</button>
+      <button class="cc-accept" data-cc="accept">Accept all</button>
+    </div>
+  </div>
+</div>
 </main>
 
 <footer>
@@ -1150,6 +1201,7 @@
       <span><a href="/privacy.html" style="color:var(--cream-faint); transition:color 0.3s ease;" onmouseover="this.style.color='var(--amber-bright)'" onmouseout="this.style.color='var(--cream-faint)'">Privacy policy</a> &nbsp;·&nbsp; recordingstudio.co.za</span>
     </div>
   </div>
+  <a href="#" onclick="openCookieSettings(); return false;">Cookie settings</a>
 </footer>
 
 <script>document.documentElement.classList.add('js');</script>
@@ -1646,6 +1698,45 @@ if (hasGsap && !reduceMotion) {
   }
 });
 </script>
-
+<script>
+(function(){
+  var KEY = 'cc_consent_v1';
+  var banner = document.getElementById('cc-banner');
+ 
+  function gtag(){ dataLayer.push(arguments); }
+ 
+  function apply(state){
+    window.dataLayer = window.dataLayer || [];
+    gtag('consent', 'update', {
+      ad_storage:        state.marketing ? 'granted' : 'denied',
+      ad_user_data:      state.marketing ? 'granted' : 'denied',
+      ad_personalization:state.marketing ? 'granted' : 'denied',
+      analytics_storage: state.analytics ? 'granted' : 'denied'
+    });
+    dataLayer.push({ event: 'cc_consent_update', consent: state });
+    banner.hidden = true;
+  }
+ 
+  function save(state){
+    state.ts = new Date().toISOString();   // timestamp for audit
+    localStorage.setItem(KEY, JSON.stringify(state));
+    apply(state);
+  }
+ 
+  var saved = localStorage.getItem(KEY);
+  if (saved){ apply(JSON.parse(saved)); }
+  else { banner.hidden = false; }
+ 
+  document.querySelector('[data-cc="accept"]').onclick = function(){
+    save({ analytics:true, marketing:true });
+  };
+  document.querySelector('[data-cc="reject"]').onclick = function(){
+    save({ analytics:false, marketing:false });
+  };
+ 
+  // Footer "Cookie settings" link calls this to reopen the banner.
+  window.openCookieSettings = function(){ banner.hidden = false; };
+})();
+</script>
 </body>
 </html>
