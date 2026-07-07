@@ -213,7 +213,7 @@
       .nav-toggle { display: flex; }
     }
 
-    /* ---- HERO (mini) ---- */
+    /* ---- PAGE HERO (mini) ---- */
     .page-hero {
       padding: 160px 0 60px;
       border-bottom: 1px solid var(--line);
@@ -317,7 +317,7 @@
       font-weight: 400;
     }
 
-    /* ---- FOOTER ---- */
+    /* ---- FOOTER (mirror) ---- */
     footer {
       background: var(--ink);
       border-top: 1px solid var(--line);
@@ -375,11 +375,12 @@
   </style>
 </head>
 <body>
-  <!-- NAV (fixed, same as main) -->
+  <!-- ===== NAV with hardcoded links to /index.html sections ===== -->
   <nav id="nav">
     <div class="wrap nav-inner">
       <a href="/" class="logo">Didi&rsquo;s <em>House</em></a>
       <div class="nav-links" id="navLinks">
+        <!-- all links point to index.html + anchor -->
         <a href="/#space">The Space</a>
         <a href="/#sessions">Sessions</a>
         <a href="/#chain">Signal Chain</a>
@@ -395,7 +396,7 @@
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
+  <!-- ===== PAGE HERO ===== -->
   <section class="page-hero">
     <div class="wrap">
       <p class="tag">Contact</p>
@@ -404,7 +405,7 @@
     </div>
   </section>
 
-  <!-- CONTENT: FORM + SIDE INFO -->
+  <!-- ===== CONTENT: FORM + SIDE INFO ===== -->
   <section class="wrap contact-grid">
     <!-- LEFT: form -->
     <div class="contact-form">
@@ -465,7 +466,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (mirror) -->
+  <!-- ===== FOOTER (mirror) ===== -->
   <footer>
     <div class="wrap">
       <div class="foot-grid">
