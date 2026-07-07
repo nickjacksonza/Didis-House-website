@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Didi’s House – Ad Space</title>
+  <meta name="description" content="Support Didi's House Recording Studio by viewing ads. Ad revenue helps keep the studio running. Thank you for your support!">
+  <link rel="canonical" href="https://recordingstudio.co.za/ads.html">
+  <meta name="robots" content="noindex, follow">
+  <!-- Google Fonts + base styling reused from main site, slightly compact -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,640;1,9..144,420;1,9..144,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    /* Minimal reset + reuse of Didi's House DNA */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: #0d0f0c;
+      color: #f2ead9;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      font-size: 17px;
+      padding: 2rem 1.5rem;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #93b074;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .tag::before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: #93b074;
+      flex-shrink: 0;
+    }
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 560;
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin: 0.5rem 0 1rem;
+    }
+    h1 em {
+      font-style: italic;
+      font-weight: 420;
+      color: #ffc06e;
+    }
+    .subhead {
+      color: #cfc8b4;
+      max-width: 60ch;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8f8b7c;
+      border: 1px solid rgba(242,234,217,0.15);
+      padding: 12px 24px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-bottom: 2.5rem;
+    }
+    .back-link:hover {
+      border-color: #93b074;
+      color: #f2ead9;
+    }
+    .back-link::before {
+      content: '← ';
+    }
+
+    /* Ad grid */
+    .ad-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0 3rem;
+    }
+    .ad-card {
+      background: rgba(19,22,15,0.7);
+      border: 1px solid rgba(242,234,217,0.08);
+      border-radius: 12px;
+      padding: 1.5rem 1rem 1rem;
+      transition: border-color 0.3s ease, transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .ad-card:hover {
+      border-color: rgba(232,161,76,0.3);
+      transform: translateY(-4px);
+    }
+    .ad-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8f8b7c;
+      background: rgba(13,15,12,0.5);
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .ad-placeholder {
+      width: 100%;
+      min-height: 90px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1.2rem 0.5rem;
+      border: 1px dashed rgba(242,234,217,0.1);
+      color: #8f8b7c;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .ad-placeholder:hover {
+      background: rgba(147,176,116,0.04);
+    }
+    .ad-placeholder svg {
+      opacity: 0.2;
+      margin-bottom: 6px;
+    }
+    .ad-placeholder strong {
+      color: #cfc8b4;
+      font-weight: 400;
+    }
+    .ad-note {
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: #6d8a5b;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.04em;
+    }
+    .inline-ad {
+      background: rgba(19,22,15,0.4);
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      margin: 2.5rem 0;
+      border: 1px solid rgba(242,234,217,0.05);
+      text-align: center;
+    }
+    .inline-ad .ad-placeholder {
+      min-height: 120px;
+    }
+    .footnote {
+      border-top: 1px solid rgba(242,234,217,0.06);
+      margin-top: 3rem;
+      padding-top: 2rem;
+      color: #8f8b7c;
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .footnote a {
+      color: #93b074;
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.2s;
+    }
+    .footnote a:hover {
+      border-color: #93b074;
+    }
+    /* responsive */
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .ad-grid { grid-template-columns: 1fr; }
+    }
+    /* AdSense snippet hint – visible only to dev, but we keep it clean */
+    .adsense-hint {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- breadcrumb / back to studio -->
+  <a href="index.html" class="back-link">Back to studio</a>
+
+  <div class="tag">Support the studio</div>
+  <h1>Ad revenue helps keep <em>Didi’s House</em> running</h1>
+  <p class="subhead">
+    Every click on a relevant ad helps cover gear, coffee, and cat treats. 
+    These spaces are reserved for Google AdSense — if you see something interesting, give it a tap.
+  </p>
+
+  <!-- ====== ADS GRID ====== -->
+  <div class="ad-grid">
+
+    <!-- Ad 1 – leaderboard style -->
+    <div class="ad-card">
+      <span class="ad-label">📢 Ad space</span>
+      <div class="ad-placeholder" id="ad-slot-1">
+        <!-- Google AdSense will be placed here. 
+             Replace the inner HTML with your AdSense unit code. 
+             Example: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxxxx" data-ad-slot="yyyyyyyy" data-ad-format="auto"></ins> -->
+        <svg width="48" height="36" viewBox="0 0 24 18" fill="none" stroke="#8f8b7c" stroke-width="1.2"><rect x="2" y="2" width="20" height="14" rx="2" stroke="currentColor"/><path d="M7 6 L12 10 L17 6" stroke="currentColor"/><circle cx="7" cy="6" r="1.2" fill="currentColor"/></svg>
+        <div><strong>Ad unit 1</strong> · 300×250</div>
+        <div style="font-size:0.75rem; margin-top:4px;">Replace with AdSense code</div>
+      </div>
+      <div class="ad-note">• display •</div>
+    </div>
+
+    <!-- Ad 2 -->
+    <div class="ad-card">
+      <span class="ad-label">📢 Ad space</span>
+      <div class="ad-placeholder" id="ad-slot-2">
+        <svg width="48" height="36" viewBox="0 0 24 18" fill="none" stroke="#8f8b7c" stroke-width="1.2"><rect x="2" y="2" width="20" height="14" rx="2" stroke="currentColor"/><path d="M7 6 L12 10 L17 6" stroke="currentColor"/><circle cx="7" cy="6" r="1.2" fill="currentColor"/></svg>
+        <div><strong>Ad unit 2</strong> · 300×250</div>
+        <div style="font-size:0.75rem; margin-top:4px;">Replace with AdSense code</div>
+      </div>
+      <div class="ad-note">• display •</div>
+    </div>
+
+    <!-- Ad 3 -->
+    <div class="ad-card">
+      <span class="ad-label">📢 Ad space</span>
+      <div class="ad-placeholder" id="ad-slot-3">
+        <svg width="48" height="36" viewBox="0 0 24 18" fill="none" stroke="#8f8b7c" stroke-width="1.2"><rect x="2" y="2" width="20" height="14" rx="2" stroke="currentColor"/><path d="M7 6 L12 10 L17 6" stroke="currentColor"/><circle cx="7" cy="6" r="1.2" fill="currentColor"/></svg>
+        <div><strong>Ad unit 3</strong> · 300×250</div>
+        <div style="font-size:0.75rem; margin-top:4px;">Replace with AdSense code</div>
+      </div>
+      <div class="ad-note">• display •</div>
+    </div>
+
+    <!-- Ad 4 – larger inline (full width) -->
+    <div style="grid-column: 1 / -1;" class="ad-card">
+      <span class="ad-label">📢 Leaderboard</span>
+      <div class="ad-placeholder" id="ad-slot-4" style="min-height:140px;">
+        <svg width="60" height="40" viewBox="0 0 24 18" fill="none" stroke="#8f8b7c" stroke-width="1.2"><rect x="2" y="2" width="20" height="14" rx="2" stroke="currentColor"/><path d="M7 6 L12 10 L17 6" stroke="currentColor"/><circle cx="7" cy="6" r="1.2" fill="currentColor"/></svg>
+        <div><strong>Ad unit 4</strong> · 728×90 (or responsive)</div>
+        <div style="font-size:0.75rem; margin-top:4px;">Replace with AdSense code</div>
+      </div>
+      <div class="ad-note">• full-width •</div>
+    </div>
+  </div>
+
+  <!-- ====== INLINE AD (between content) ====== -->
+  <div class="inline-ad">
+    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">📢 In-feed ad</span>
+    <div class="ad-placeholder" id="ad-slot-5" style="min-height:100px;">
+      <svg width="48" height="36" viewBox="0 0 24 18" fill="none" stroke="#8f8b7c" stroke-width="1.2"><rect x="2" y="2" width="20" height="14" rx="2" stroke="currentColor"/><path d="M7 6 L12 10 L17 6" stroke="currentColor"/><circle cx="7" cy="6" r="1.2" fill="currentColor"/></svg>
+      <div><strong>In‑article ad</strong> · responsive</div>
+      <div style="font-size:0.75rem; margin-top:4px;">Replace with AdSense code</div>
+    </div>
+    <div class="ad-note" style="margin-top:0.5rem;">• between content •</div>
+  </div>
+
+  <!-- ====== EXTRA: SMALL AD SIDEBAR STYLE (optional) ====== -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+    <div class="ad-card" style="grid-column: 1 / 2;">
+      <span class="ad-label">📢 Side</span>
+      <div class="ad-placeholder" id="ad-slot-6" style="min-height:90px;">
+        <div><strong>Ad unit 6</strong> · 160×600 (skyscraper)</div>
+        <div style="font-size:0.7rem;">Replace with AdSense code</div>
+      </div>
+      <div class="ad-note">• vertical •</div>
+    </div>
+    <div class="ad-card" style="grid-column: 2 / 3;">
+      <span class="ad-label">📢 Side</span>
+      <div class="ad-placeholder" id="ad-slot-7" style="min-height:90px;">
+        <div><strong>Ad unit 7</strong> · 160×600 (skyscraper)</div>
+        <div style="font-size:0.7rem;">Replace with AdSense code</div>
+      </div>
+      <div class="ad-note">• vertical •</div>
+    </div>
+  </div>
+
+  <!-- ====== FOOTNOTE + SUPPORT MESSAGE ====== -->
+  <div class="footnote">
+    <span>💚 Thanks for supporting Didi’s House. Every view counts.</span>
+    <span>
+      <a href="index.html">← back to studio</a> · 
+      <a href="#" onclick="window.location.reload(); return false;">refresh ads</a>
+    </span>
+  </div>
+
+  <!-- ====== INSTRUCTION / HINT (hidden from visitors) ====== -->
+  <div class="adsense-hint">
+    <!-- 
+      ************************************************************
+      * GOOGLE ADSENSE INTEGRATION GUIDE                          *
+      * 1. Replace each .ad-placeholder inner content with your   *
+      *    AdSense unit code (ins tags).                          *
+      * 2. Example for a display ad:                             *
+      *    <ins class="adsbygoogle"                              *
+      *         style="display:block"                            *
+      *         data-ad-client="ca-pub-XXXXXXXXXXXXXX"           *
+      *         data-ad-slot="YYYYYYYYYY"                        *
+      *         data-ad-format="auto"></ins>                     *
+      *    <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> *
+      * 3. You can also use auto ads by adding the script once   *
+      *    in the head or body.                                  *
+      * 4. The ad slots above are ready to accept any AdSense    *
+      *    unit. Just swap the placeholder HTML.                 *
+      ************************************************************
+    -->
+  </div>
+
+  <!-- ====== (optional) AdSense script – uncomment when you have your client ID ====== -->
+  <!-- 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+
+</div> <!-- .wrap -->
+</body>
+</html>
