@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXDRQXGGB1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CXDRQXGGB1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Didi's House Recording Studio | Randburg</title>
+  <meta name="description" content="Get in touch with Didi's House recording studio in Kensington B, Randburg. Book a session, ask a question, or enquire about audiobook rates." />
+  <link rel="canonical" href="https://recordingstudio.co.za/contact" />
+  <!-- fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,640;1,9..144,420;1,9..144,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    /* --------------------------------------------------------------
+       Reset & variables – mirror main site
+    -------------------------------------------------------------- */
+    :root {
+      --ink: #0d0f0c;
+      --ink-2: #13160f;
+      --ink-3: #1a1e15;
+      --cream: #f2ead9;
+      --cream-dim: #cfc8b4;
+      --cream-faint: #8f8b7c;
+      --sage: #93b074;
+      --amber-bright: #ffc06e;
+      --brick: #c0593b;
+      --leaf: #6d8a5b;
+      --line: rgba(242, 234, 217, 0.1);
+      --serif: 'Fraunces', Georgia, serif;
+      --body: 'Hanken Grotesk', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--body);
+      font-weight: 300;
+      line-height: 1.65;
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--sage); color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+    .wrap {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 36px;
+      position: relative;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .tag::before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--sage);
+      flex-shrink: 0;
+    }
+    h2.display {
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: clamp(2.6rem, 5.8vw, 4.8rem);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-top: 18px;
+    }
+    h2.display em { font-style: italic; font-weight: 420; color: var(--sage); }
+    .btn {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 17px 32px;
+      border-radius: 30px;
+      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-fill {
+      background: var(--sage);
+      color: #1d130a;
+      font-weight: 400;
+    }
+    .btn-fill:hover {
+      background: var(--amber-bright);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(232,161,76,0.4);
+    }
+    .btn-outline {
+      border-color: rgba(242,234,217,0.45);
+      color: var(--cream);
+      background: rgba(13,15,12,0.3);
+    }
+    .btn-outline:hover {
+      border-color: var(--sage);
+      color: var(--amber-bright);
+      transform: translateY(-2px);
+    }
+
+    /* ---- NAV (mirror) ---- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 24px 0;
+      transition: padding 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+      border-bottom: 1px solid transparent;
+      background: rgba(13,15,12,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-color: var(--line);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 640;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+    }
+    .logo em { font-style: italic; font-weight: 420; color: var(--sage); }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0;
+      height: 1.5px;
+      background: var(--sage);
+      transition: width 0.35s ease;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      padding: 6px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--cream);
+      transition: all 0.3s ease;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+    @media (max-width: 600px) {
+      .wrap { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: rgba(13,15,12,0.97);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        padding: 30px 20px;
+        gap: 22px;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-toggle { display: flex; }
+    }
+
+    /* ---- HERO (mini) ---- */
+    .page-hero {
+      padding: 160px 0 60px;
+      border-bottom: 1px solid var(--line);
+    }
+    .page-hero h1 {
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: clamp(2.8rem, 5.2vw, 4.4rem);
+      letter-spacing: -0.02em;
+      margin: 12px 0 10px;
+    }
+    .page-hero h1 em { font-style: italic; font-weight: 420; color: var(--amber-bright); }
+    .page-hero .lead {
+      color: var(--cream-dim);
+      max-width: 50ch;
+      font-size: 18px;
+    }
+
+    /* ---- CONTACT GRID ---- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 70px 0 90px;
+    }
+    .contact-form label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+      margin-top: 24px;
+      margin-bottom: 6px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background: var(--ink-2);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 14px 16px;
+      color: var(--cream);
+      font-family: var(--body);
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--sage);
+    }
+    .contact-form textarea { min-height: 140px; resize: vertical; }
+    .contact-form .btn { margin-top: 28px; border: none; }
+
+    .contact-side {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    .contact-side .card {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 28px 30px;
+      background: rgba(19,22,15,0.5);
+    }
+    .contact-side .card h3 {
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .contact-side .card p,
+    .contact-side .card a {
+      color: var(--cream-dim);
+      font-size: 16px;
+      display: block;
+      margin-top: 4px;
+    }
+    .contact-side .card a { transition: color 0.2s; }
+    .contact-side .card a:hover { color: var(--amber-bright); }
+    .contact-side .card .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .contact-side .card .chip-group span {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+      border: 1px solid rgba(242,234,217,0.2);
+      padding: 5px 12px;
+      border-radius: 30px;
+      background: rgba(13,15,12,0.3);
+    }
+    .contact-side .card .highlight {
+      color: var(--amber-bright);
+      font-weight: 400;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid var(--line);
+      padding: 72px 0 44px;
+    }
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 52px;
+    }
+    .foot-logo {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 640;
+      letter-spacing: -0.02em;
+    }
+    .foot-logo em { font-style: italic; font-weight: 420; color: var(--sage); }
+    .foot-col h4 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+    .foot-col p, .foot-col a {
+      color: var(--cream-dim);
+      font-size: 14.5px;
+      display: block;
+      margin-bottom: 7px;
+    }
+    .foot-col a:hover { color: var(--amber-bright); }
+    .foot-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--cream-faint);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .foot-grid { grid-template-columns: 1fr; gap: 30px; }
+    }
+    @media (max-width: 600px) {
+      .contact-side .card { padding: 20px; }
+      .page-hero { padding: 130px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV (fixed, same as main) -->
+  <nav id="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo">Didi&rsquo;s <em>House</em></a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#space">The Space</a>
+        <a href="/#sessions">Sessions</a>
+        <a href="/#chain">Signal Chain</a>
+        <a href="/#rates">Rates</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="tag">Contact</p>
+      <h1>Get in <em>touch</em></h1>
+      <p class="lead">Book a session, ask a question, or enquire about the South African language audiobook rate. We&rsquo;ll get back to you quickly.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT: FORM + SIDE INFO -->
+  <section class="wrap contact-grid">
+    <!-- LEFT: form -->
+    <div class="contact-form">
+      <form action="https://formspree.io/f/xpzvzwwa" method="POST">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Thandi" required />
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="+27 82 123 4567" />
+
+        <label for="subject">What&rsquo;s this about?</label>
+        <input type="text" id="subject" name="subject" placeholder="Booking / Audiobook / Question" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us what you'd like to record, when you're thinking of, and any special requests..."></textarea>
+
+        <button type="submit" class="btn btn-fill">Send message</button>
+      </form>
+      <p style="color: var(--cream-faint); font-size: 13px; margin-top: 16px; font-family: var(--mono);">We reply within a few hours, usually sooner.</p>
+    </div>
+
+    <!-- RIGHT: studio info + quick links -->
+    <div class="contact-side">
+      <div class="card">
+        <h3>📞 Call or WhatsApp</h3>
+        <p><a href="https://wa.me/27823052664" target="_blank" rel="noopener">+27 82 305 2664</a></p>
+        <p><a href="tel:+27823052664">+27 82 305 2664</a></p>
+        <div style="margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px;">
+          <p style="color: var(--cream); font-weight: 400;">Weekdays · 8am – 5pm</p>
+          <p style="color: var(--cream-faint); font-size: 14px;">Sessions by appointment, same-day often possible.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📍 Find the studio</h3>
+        <p>Kensington B, Randburg</p>
+        <p style="color: var(--cream-faint); font-size: 14px;">Easy from Sandton, Bryanston, Fourways, Northcliff, Rosebank and most of Joburg north.</p>
+        <div class="chip-group">
+          <span>Off-street parking</span>
+          <span>WiFi</span>
+          <span>Garden</span>
+        </div>
+        <p style="margin-top: 12px; font-size: 14px; color: var(--cream-faint);">The full address is sent with your booking confirmation.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎙️ Quick rates</h3>
+        <p><span class="highlight">R700/hr</span> — all gear included</p>
+        <p><span class="highlight">R350/hr</span> — South African language audiobooks</p>
+        <div style="margin-top: 12px;">
+          <a href="https://wa.me/27823052664?text=Hi%21%20I%27d%20like%20to%20book%20a%20session%20at%20Didi%27s%20House." class="btn btn-fill" style="padding: 12px 24px; font-size: 11px; margin-right: 8px;" target="_blank" rel="noopener">Book now</a>
+          <a href="/#rates" class="btn btn-outline" style="padding: 12px 24px; font-size: 11px;">See details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (mirror) -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <div class="foot-logo">Didi&rsquo;s <em>House</em></div>
+          <p style="margin-top:14px; max-width:34ch;">A semi-professional recording studio in Kensington B, Randburg. </p>
+          <p>P.S. Didi is the cat.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Find it</h4>
+          <p>Kensington B</p>
+          <p>Randburg</p>
+          <p>Johannesburg, South Africa</p>
+        </div>
+        <div class="foot-col">
+          <h4>Get in touch</h4>
+          <a href="https://wa.me/27823052664" target="_blank" rel="noopener">WhatsApp +27 82 305 2664</a>
+          <a href="tel:+27823052664">+27 82 305 2664</a>
+          <p style="margin-top:12px;">Weekdays 8am to 5pm, by appointment</p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 Didi&rsquo;s House · Kensington B, Randburg</span>
+        <span><a href="/">recordingstudio.co.za</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- small script: nav toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          toggle.classList.toggle('open');
+          links.classList.toggle('open');
+        });
+        links.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            toggle.classList.remove('open');
+            links.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
