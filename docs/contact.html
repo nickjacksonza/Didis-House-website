@@ -1,6 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
+  <!-- ===== Consent Mode v2 default-deny. ===== -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'denied',
+      personalization_storage: 'denied',
+      security_storage: 'granted',
+      region: ['ZA'],
+      wait_for_update: 500
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXDRQXGGB1"></script>
   <script>
@@ -13,9 +29,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact · Didi's House Recording Studio | Randburg</title>
   <meta name="description" content="Get in touch with Didi's House recording studio in Kensington B, Randburg. Book a session, ask a question, or enquire about audiobook rates." />
-  <link rel="canonical" href="https://recordingstudio.co.za/contact" />
+  <meta name="author" content="Didi's House">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d0f0c">
+  <link rel="canonical" href="https://recordingstudio.co.za/contact.html" />
+
+  <meta name="geo.region" content="ZA-GP">
+  <meta name="geo.placename" content="Randburg, Johannesburg">
+  <meta name="geo.position" content="-26.076359;27.999736">
+  <meta name="ICBM" content="-26.076359, 27.999736">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact · Didi's House Recording Studio | Kensington B, Randburg">
+  <meta property="og:description" content="Book a session, ask a question, or enquire about the South African language audiobook rate.">
+  <meta property="og:url" content="https://recordingstudio.co.za/contact.html">
+  <meta property="og:site_name" content="Didi's House">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:image" content="https://recordingstudio.co.za/didis-house-outdoor-pic.avif">
+  <meta property="og:image:alt" content="Didi's House Recording Studio exterior, Kensington B, Randburg, Johannesburg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact · Didi's House Recording Studio">
+  <meta name="twitter:description" content="Book a session, ask a question, or enquire about the South African language audiobook rate.">
+  <meta name="twitter:image" content="https://recordingstudio.co.za/didis-house-outdoor-pic.avif">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="privacy-policy" href="https://recordingstudio.co.za/privacy.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://recordingstudio.co.za/contact.html#webpage",
+    "url": "https://recordingstudio.co.za/contact.html",
+    "name": "Contact · Didi's House Recording Studio",
+    "description": "Book a session, ask a question, or enquire about the South African language audiobook rate.",
+    "inLanguage": "en-ZA",
+    "isPartOf": { "@id": "https://recordingstudio.co.za/#website" },
+    "about": { "@id": "https://recordingstudio.co.za/#business" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://recordingstudio.co.za/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://recordingstudio.co.za/contact.html" }
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "@id": "https://recordingstudio.co.za/#business",
+    "name": "Didi's House Recording Studio",
+    "url": "https://recordingstudio.co.za",
+    "telephone": "+27823052664",
+    "image": "https://recordingstudio.co.za/didis-house-outdoor-pic.avif",
+    "priceRange": "R350-R700",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kensington B",
+      "addressLocality": "Randburg",
+      "postalCode": "2194",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -26.076359, "longitude": 27.999736 },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/recordingstudiocoza"
+    ]
+  }
+  </script>
   <!-- fonts & icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,640;1,9..144,420;1,9..144,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
   <style>
@@ -280,7 +378,7 @@
       padding: 28px 30px;
       background: rgba(19,22,15,0.5);
     }
-    .contact-side .card h3 {
+    .contact-side .card h2 {
       font-family: var(--serif);
       font-weight: 560;
       font-size: 1.4rem;
@@ -336,7 +434,7 @@
       letter-spacing: -0.02em;
     }
     .foot-logo em { font-style: italic; font-weight: 420; color: var(--sage); }
-    .foot-col h4 {
+    .foot-col h3 {
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 0.16em;
@@ -433,7 +531,7 @@
     <!-- RIGHT: studio info + quick links -->
     <div class="contact-side">
       <div class="card">
-        <h3>📞 Call or WhatsApp</h3>
+        <h2>📞 Call or WhatsApp</h2>
         <p><a href="https://wa.me/27823052664" target="_blank" rel="noopener">+27 82 305 2664</a></p>
         <p><a href="tel:+27823052664">+27 82 305 2664</a></p>
         <div style="margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px;">
@@ -443,7 +541,7 @@
       </div>
 
       <div class="card">
-        <h3>📍 Find the studio</h3>
+        <h2>📍 Find the studio</h2>
         <p>Kensington B, Randburg</p>
         <p style="color: var(--cream-faint); font-size: 14px;">Easy from Sandton, Bryanston, Fourways, Northcliff, Rosebank and most of Joburg north.</p>
         <div class="chip-group">
@@ -452,10 +550,22 @@
           <span>Garden</span>
         </div>
         <p style="margin-top: 12px; font-size: 14px; color: var(--cream-faint);">The full address is sent with your booking confirmation.</p>
+        <div class="map-holder" style="margin-top:16px; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:340px; background:#fff;">
+          <gmpx-store-locator map-id="DEMO_MAP_ID" style="width:100%; height:100%; display:block;
+            --gmpx-color-surface:#fff;
+            --gmpx-color-on-surface:#212121;
+            --gmpx-color-on-surface-variant:#757575;
+            --gmpx-color-primary:#6d8a5b;
+            --gmpx-color-outline:#e0e0e0;
+            --gmpx-fixed-panel-height-column-layout:0%;
+            --gmpx-font-family-base:'Hanken Grotesk', sans-serif;
+            --gmpx-font-family-headings:'Fraunces', serif;
+            --gmpx-font-size-base:0.875rem;"></gmpx-store-locator>
+        </div>
       </div>
 
       <div class="card">
-        <h3>🎙️ Quick rates</h3>
+        <h2>🎙️ Quick rates</h2>
         <p><span class="highlight">R700/hr</span> — all gear included</p>
         <p><span class="highlight">R350/hr</span> — South African language audiobooks</p>
         <div style="margin-top: 12px;">
@@ -476,24 +586,47 @@
           <p>P.S. Didi is the cat.</p>
         </div>
         <div class="foot-col">
-          <h4>Find it</h4>
+          <h3>Find it</h3>
           <p>Kensington B</p>
           <p>Randburg</p>
           <p>Johannesburg, South Africa</p>
         </div>
         <div class="foot-col">
-          <h4>Get in touch</h4>
-          <a href="https://wa.me/27823052664" target="_blank" rel="noopener">WhatsApp +27 82 305 2664</a>
+          <h3>Get in touch</h3>
+          <a href="https://wa.me/27823052664" target="_blank" rel="noopener noreferrer">WhatsApp +27 82 305 2664</a>
           <a href="tel:+27823052664">+27 82 305 2664</a>
+          <a href="https://www.facebook.com/recordingstudiocoza" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="/support-for-free.html">Support the studio for free</a>
           <p style="margin-top:12px;">Weekdays 8am to 5pm, by appointment</p>
         </div>
       </div>
       <div class="foot-bottom">
         <span>&copy; 2026 Didi&rsquo;s House · Kensington B, Randburg</span>
-        <span><a href="/">recordingstudio.co.za</a></span>
+        <span><a href="/privacy.html" style="color:var(--cream-faint);">Privacy policy</a> &nbsp;·&nbsp; <a href="/">recordingstudio.co.za</a></span>
       </div>
     </div>
   </footer>
+
+  <!-- Google Maps Locator Plus (Extended Component Library) -->
+  <script>
+    const CONFIGURATION = {
+      "locations": [
+        {"title":"Didi's House Recording Studio","address1":"Kensington B","address2":"Randburg, Johannesburg, 2194, South Africa","coords":{"lat":-26.0763828,"lng":27.9997111}}
+      ],
+      "mapOptions": {"center":{"lat":-26.0763828,"lng":27.9997111},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":14,"zoomControl":true,"maxZoom":17,"mapId":""},
+      "mapsApiKey": "AIzaSyCnmSHWbDZeTZSxXWsTT5NB2OmEoHzpJbw",
+      "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+    };
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.15/index.min.js"></script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', async () => {
+      await customElements.whenDefined('gmpx-store-locator');
+      const locator = document.querySelector('gmpx-store-locator');
+      if (locator) locator.configureFromQuickBuilder(CONFIGURATION);
+    });
+  </script>
+  <gmpx-api-loader key="AIzaSyCnmSHWbDZeTZSxXWsTT5NB2OmEoHzpJbw" solution-channel="GMP_QB_locatorplus_v11_c"></gmpx-api-loader>
 
   <!-- small script: nav toggle -->
   <script>
