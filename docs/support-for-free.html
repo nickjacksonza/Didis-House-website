@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-ZA">
 <head>
-    <!-- ===== Consent Mode v2 default-deny. ===== -->
+  <!-- ===== Consent Mode v2 default-deny. ===== -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
@@ -16,6 +16,12 @@
       region: ['ZA'],
       wait_for_update: 500
     });
+        // Check if the user previously accepted consent
+  if (localStorage.getItem('cookie_consent') === 'granted') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+  }
   </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXDRQXGGB1"></script>
@@ -25,60 +31,146 @@
     gtag('js', new Date());
     gtag('config', 'G-CXDRQXGGB1');
   </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recording Studio Equipment & Session Guide | Didi's House</title>
-  <meta name="description" content="An in-depth, plain-English guide to recording studio equipment, mic choice, gain staging and session technique for voice over, podcasts, audiobooks and demos, from Didi's House Recording Studio in Randburg.">
-  <link rel="canonical" href="https://recordingstudio.co.za/support-for-free.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Didi's House Recording Studio | Randburg</title>
+  <meta name="description" content="Get in touch with Didi's House recording studio in Kensington B, Randburg. Book a session, ask a question, or enquire about audiobook rates." />
+  <meta name="author" content="Didi's House">
   <meta name="robots" content="index, follow">
-  <!-- Google Fonts + base styling reused from main site, slightly compact -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,640;1,9..144,420;1,9..144,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0d0f0c">
+  <link rel="canonical" href="https://recordingstudio.co.za/contact.html" />
 
-  <!-- AdSense script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2349356292132712" crossorigin="anonymous"></script>
+  <meta name="geo.region" content="ZA-GP">
+  <meta name="geo.placename" content="Randburg, Johannesburg">
+  <meta name="geo.position" content="-26.076359;27.999736">
+  <meta name="ICBM" content="-26.076359, 27.999736">
 
-  <!-- Article schema for AEO/SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact · Didi's House Recording Studio | Kensington B, Randburg">
+  <meta property="og:description" content="Book a session, ask a question, or enquire about the South African language audiobook rate.">
+  <meta property="og:url" content="https://recordingstudio.co.za/contact.html">
+  <meta property="og:site_name" content="Didi's House">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:image" content="https://recordingstudio.co.za/didis-house-outdoor-pic.avif">
+  <meta property="og:image:alt" content="Didi's House Recording Studio exterior, Kensington B, Randburg, Johannesburg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact · Didi's House Recording Studio">
+  <meta name="twitter:description" content="Book a session, ask a question, or enquire about the South African language audiobook rate.">
+  <meta name="twitter:image" content="https://recordingstudio.co.za/didis-house-outdoor-pic.avif">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="privacy-policy" href="https://recordingstudio.co.za/privacy.html">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Recording Studio Equipment & Session Guide",
-    "description": "An in-depth guide to recording studio equipment, mic choice, gain staging and session technique for voice over, podcasts, audiobooks and demos.",
-    "author": { "@type": "Organization", "name": "Didi's House" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Didi's House",
-      "url": "https://recordingstudio.co.za/"
-    },
-    "mainEntityOfPage": "https://recordingstudio.co.za/support-for-free.html",
-    "about": ["recording studio equipment", "audio interfaces", "condenser microphones", "voice over recording", "podcast recording", "audiobook recording", "gain staging"]
+    "@type": "ContactPage",
+    "@id": "https://recordingstudio.co.za/contact.html#webpage",
+    "url": "https://recordingstudio.co.za/contact.html",
+    "name": "Contact · Didi's House Recording Studio",
+    "description": "Book a session, ask a question, or enquire about the South African language audiobook rate.",
+    "inLanguage": "en-ZA",
+    "isPartOf": { "@id": "https://recordingstudio.co.za/#website" },
+    "about": { "@id": "https://recordingstudio.co.za/#business" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://recordingstudio.co.za/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://recordingstudio.co.za/contact.html" }
+      ]
+    }
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "@id": "https://recordingstudio.co.za/#business",
+    "name": "Didi's House Recording Studio",
+    "url": "https://recordingstudio.co.za",
+    "telephone": "+27823052664",
+    "image": "https://recordingstudio.co.za/didis-house-outdoor-pic.avif",
+    "priceRange": "R350-R700",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kensington B",
+      "addressLocality": "Randburg",
+      "postalCode": "2194",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -26.076359, "longitude": 27.999736 },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/recordingstudiocoza"
+    ]
+  }
+  </script>
+  <!-- fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://app.cal.eu">
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,640;1,9..144,420;1,9..144,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
   <style>
-    /* Minimal reset + reuse of Didi's House DNA */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      background: #0d0f0c;
-      color: #f2ead9;
-      font-family: 'Hanken Grotesk', system-ui, sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-      font-size: 17px;
-      padding: 2rem 1.5rem;
+    /* --------------------------------------------------------------
+       Reset & variables – mirror main site
+    -------------------------------------------------------------- */
+    :root {
+      --ink: #0d0f0c;
+      --ink-2: #13160f;
+      --ink-3: #1a1e15;
+      --cream: #f2ead9;
+      --cream-dim: #cfc8b4;
+      --cream-faint: #8f8b7c;
+      --sage: #93b074;
+      --amber-bright: #ffc06e;
+      --brick: #c0593b;
+      --leaf: #6d8a5b;
+      --line: rgba(242, 234, 217, 0.1);
+      --serif: 'Fraunces', Georgia, serif;
+      --body: 'Hanken Grotesk', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
     }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--body);
+      font-weight: 300;
+      line-height: 1.65;
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--sage); color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
     .wrap {
-      max-width: 800px;
+      width: 100%;
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 0 36px;
+      position: relative;
     }
     .tag {
-      font-family: 'Space Mono', monospace;
+      font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: #93b074;
+      color: var(--sage);
+      font-weight: 400;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -88,644 +180,550 @@
       display: block;
       width: 22px;
       height: 1px;
-      background: #93b074;
+      background: var(--sage);
       flex-shrink: 0;
     }
-    h1 {
-      font-family: 'Fraunces', Georgia, serif;
+    h2.display {
+      font-family: var(--serif);
       font-weight: 560;
-      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
-      line-height: 1.05;
+      font-size: clamp(2.6rem, 5.8vw, 4.8rem);
+      line-height: 1.0;
       letter-spacing: -0.02em;
-      margin: 0.5rem 0 1rem;
+      margin-top: 18px;
     }
-    h1 em, h2 em {
-      font-style: italic;
-      font-weight: 420;
-      color: #ffc06e;
-    }
-    .subhead {
-      color: #cfc8b4;
-      max-width: 62ch;
-      font-size: 1.1rem;
-      margin-bottom: 2.5rem;
-    }
-    .back-link {
+    h2.display em { font-style: italic; font-weight: 420; color: var(--sage); }
+    .btn {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 17px 32px;
+      border-radius: 30px;
+      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
       display: inline-block;
-      font-family: 'Space Mono', monospace;
+    }
+    .btn-fill {
+      background: var(--sage);
+      color: #1d130a;
+      font-weight: 400;
+    }
+    .btn-fill:hover {
+      background: var(--amber-bright);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(232,161,76,0.4);
+    }
+    .btn-outline {
+      border-color: rgba(242,234,217,0.45);
+      color: var(--cream);
+      background: rgba(13,15,12,0.3);
+    }
+    .btn-outline:hover {
+      border-color: var(--sage);
+      color: var(--amber-bright);
+      transform: translateY(-2px);
+    }
+
+    /* ---- NAV (mirror) ---- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 24px 0;
+      transition: padding 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+      border-bottom: 1px solid transparent;
+      background: rgba(13,15,12,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-color: var(--line);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 640;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+    }
+    .logo em { font-style: italic; font-weight: 420; color: var(--sage); }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #8f8b7c;
-      border: 1px solid rgba(242,234,217,0.15);
-      padding: 12px 24px;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      margin-bottom: 2.5rem;
+      color: var(--cream-dim);
+      transition: color 0.3s ease;
+      position: relative;
     }
-    .back-link:hover {
-      border-color: #93b074;
-      color: #f2ead9;
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0;
+      height: 1.5px;
+      background: var(--sage);
+      transition: width 0.35s ease;
     }
-    .back-link::before {
-      content: '\2190 ';
-    }
-
-    article { margin-top: 1rem; }
-
-    .section-tag {
-      margin-top: 3rem;
-      margin-bottom: 0.6rem;
-    }
-    h2 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-weight: 560;
-      font-size: clamp(1.5rem, 3.6vw, 2.1rem);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 1rem;
-    }
-    h3 {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 500;
-      font-size: 1.05rem;
-      color: #f2ead9;
-      margin: 0 0 0.4rem;
-    }
-    p {
-      color: #cfc8b4;
-      margin-bottom: 1rem;
-      max-width: 68ch;
-    }
-    .gear-list, .tips-list {
-      list-style: none;
-      display: grid;
-      gap: 1.2rem;
-      margin: 1.5rem 0 2rem;
-    }
-    .gear-list li, .tips-list li {
-      background: rgba(19,22,15,0.55);
-      border: 1px solid rgba(242,234,217,0.08);
-      border-radius: 10px;
-      padding: 1.1rem 1.3rem;
-    }
-    .gear-list li p, .tips-list li p {
-      margin-bottom: 0;
-    }
-    .gear-list .role {
-      font-family: 'Space Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #93b074;
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    /* Ads placed within the article flow, spaced between substantial sections */
-    .inline-ad {
-      background: rgba(19,22,15,0.4);
-      border-radius: 12px;
-      padding: 1.5rem 1rem;
-      margin: 2.5rem 0;
-      border: 1px solid rgba(242,234,217,0.05);
-      text-align: center;
-    }
-    .ad-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #8f8b7c;
-      background: rgba(13,15,12,0.5);
-      padding: 4px 12px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    .ad-placeholder {
-      width: 100%;
-      min-height: 90px;
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-right {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 16px;
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      padding: 6px;
       flex-direction: column;
+      gap: 5px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--cream);
+      transition: all 0.3s ease;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+    @media (max-width: 600px) {
+      .wrap { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: rgba(13,15,12,0.97);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        padding: 30px 20px;
+        gap: 22px;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-toggle { display: flex; }
     }
 
-    /* Skyscraper side rails: fixed in the page margins, only shown when there's
-       enough viewport width that they can never overlap the content column
-       (800px content + generous margin on each side). Hidden below 1440px. */
-    .rail {
-      position: fixed;
-      top: 130px;
-      width: 160px;
-      z-index: 2;
+    /* ---- PAGE HERO (mini) ---- */
+    .page-hero {
+      padding: 160px 0 60px;
+      border-bottom: 1px solid var(--line);
     }
-    .rail-left { left: 28px; }
-    .rail-right { right: 28px; }
-    .rail .ad-label { margin-bottom: 0.6rem; }
-    @media (max-width: 1440px) {
-      .rail { display: none; }
+    .page-hero h1 {
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: clamp(2.8rem, 5.2vw, 4.4rem);
+      letter-spacing: -0.02em;
+      margin: 12px 0 10px;
     }
-
-    .closing {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(242,234,217,0.06);
+    .page-hero h1 em { font-style: italic; font-weight: 420; color: var(--amber-bright); }
+    .page-hero .lead {
+      color: var(--cream-dim);
+      max-width: 50ch;
+      font-size: 18px;
     }
 
-    .footnote {
-      border-top: 1px solid rgba(242,234,217,0.06);
-      margin-top: 3rem;
-      padding-top: 2rem;
-      color: #8f8b7c;
-      font-size: 0.9rem;
+    /* ---- BOOKING CALENDAR ---- */
+    .booking {
+      padding: 64px 0 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .booking h2 {
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: clamp(2rem, 3.6vw, 2.9rem);
+      letter-spacing: -0.02em;
+      margin: 12px 0 8px;
+    }
+    .booking h2 em { font-style: italic; font-weight: 420; color: var(--sage); }
+    .booking .lead {
+      color: var(--cream-dim);
+      max-width: 54ch;
+      margin-bottom: 30px;
+    }
+    .cal-holder {
+      width: 100%;
+      min-height: 760px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--ink-2);
+    }
+    #my-cal-inline-recording-studio-time {
+      width: 100%;
+      height: 100%;
+      min-height: 760px;
+      overflow: auto;
+    }
+    @media (max-width: 600px) {
+      .cal-holder, #my-cal-inline-recording-studio-time { min-height: 640px; }
+      .booking { padding: 44px 0 16px; }
+    }
+
+    /* ---- CONTACT GRID ---- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 70px 0 90px;
+    }
+    .contact-form label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+      margin-top: 24px;
+      margin-bottom: 6px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background: var(--ink-2);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 14px 16px;
+      color: var(--cream);
+      font-family: var(--body);
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--sage);
+    }
+    .contact-form textarea { min-height: 140px; resize: vertical; }
+    .contact-form .btn { margin-top: 28px; border: none; }
+
+    .contact-side {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    .contact-side .card {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 28px 30px;
+      background: rgba(19,22,15,0.5);
+    }
+    .contact-side .card h2 {
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .contact-side .card p,
+    .contact-side .card a {
+      color: var(--cream-dim);
+      font-size: 16px;
+      display: block;
+      margin-top: 4px;
+    }
+    .contact-side .card a { transition: color 0.2s; }
+    .contact-side .card a:hover { color: var(--amber-bright); }
+    .contact-side .card .chip-group {
       display: flex;
       flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .contact-side .card .chip-group span {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+      border: 1px solid rgba(242,234,217,0.2);
+      padding: 5px 12px;
+      border-radius: 30px;
+      background: rgba(13,15,12,0.3);
+    }
+    .contact-side .card .highlight {
+      color: var(--amber-bright);
+      font-weight: 400;
+    }
+
+    /* ---- FOOTER (mirror) ---- */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid var(--line);
+      padding: 72px 0 44px;
+    }
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 52px;
+    }
+    .foot-logo {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 640;
+      letter-spacing: -0.02em;
+    }
+    .foot-logo em { font-style: italic; font-weight: 420; color: var(--sage); }
+    .foot-col h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+    .foot-col p, .foot-col a {
+      color: var(--cream-dim);
+      font-size: 14.5px;
+      display: block;
+      margin-bottom: 7px;
+    }
+    .foot-col a:hover { color: var(--amber-bright); }
+    .foot-bottom {
+      display: flex;
       justify-content: space-between;
-      gap: 1rem;
+      align-items: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--cream-faint);
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    .footnote a {
-      color: #93b074;
-      text-decoration: none;
-      border-bottom: 1px dotted transparent;
-      transition: border-color 0.2s;
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .foot-grid { grid-template-columns: 1fr; gap: 30px; }
     }
-    .footnote a:hover {
-      border-color: #93b074;
-    }
-    /* responsive */
     @media (max-width: 600px) {
-      body { padding: 1rem; }
+      .contact-side .card { padding: 20px; }
+      .page-hero { padding: 130px 0 40px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- ====== SKYSCRAPER RAILS (unit 6 & unit 7, wide viewports only) ====== -->
-  <div class="rail rail-left">
-    <span class="ad-label">Advertisement</span>
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:160px;height:600px"
-         data-ad-client="ca-pub-2349356292132712"
-         data-ad-slot="9824174228"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-  <div class="rail rail-right">
-    <span class="ad-label">Advertisement</span>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2349356292132712"
-         data-ad-slot="9117561822"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-<div class="wrap">
-
-  <!-- breadcrumb / back to studio -->
-  <a href="/contact.html" class="back-link">Back to contact page</a>
-
-  <div class="tag">Studio notes</div>
-  <h1>What's actually in a small treated <em>booth.</em></h1>
-  <p class="subhead">
-    A long-form, plain-English guide to the gear behind a compact voice, podcast and vocal booth,
-    how to choose a mic, how to set clean levels, and the habits that make the biggest difference
-    to a good take &mdash; whether you're recording here in Randburg/Bryanston or setting up a corner of
-    your own home.
-  </p>
-
-  <article>
-
-  <div class="tag section-tag">The signal chain</div>
-  <h2>Five or six pieces of gear, one job: clean signal in.</h2>
-  <p>
-    None of this works without the room doing its job first. A treated space, even a small one,
-    absorbs the early reflections that would otherwise smear a recording with a faint, boxy echo.
-    That's why the booth itself, not just what's plugged into it, is the first piece of equipment
-    worth thinking about. From there, a small booth doesn't need much: a microphone suited to what
-    you're recording, a way to get that signal into a laptop without adding noise, and a way to hear
-    it back without the mic hearing it too. Here's what each piece in a typical booth setup actually
-    does.
-  </p>
-
-  <ul class="gear-list">
-    <li>
-      <span class="role">01 &middot; Input, condenser</span>
-      <h3>Large-diaphragm condenser microphone</h3>
-      <p>
-        The workhorse for voice-over, vocals and demos. Condenser mics are more sensitive than dynamic
-        mics, which means they pick up detail and warmth well &mdash; but also more of the room around
-        them. They need a treated space and a pop filter to sound their best, and they usually need
-        phantom power (48V) supplied by an interface or mixer to work at all.
-      </p>
-    </li>
-    <li>
-      <span class="role">02 &middot; Input, dynamic</span>
-      <h3>Dynamic microphone</h3>
-      <p>
-        Less sensitive than a condenser, which makes it more forgiving in an untreated room and less
-        prone to picking up plosives and handling noise. A common choice for podcasting, live vocals,
-        and any session where the room itself isn't fully controlled.
-      </p>
-    </li>
-    <li>
-      <span class="role">03 &middot; Convert</span>
-      <h3>Audio interface</h3>
-      <p>
-        Converts the analogue signal from a microphone into digital audio a laptop can record, and
-        supplies phantom power to condenser mics along the way. The quality of the preamp inside the
-        interface has a real, audible effect on the finished recording &mdash; a clean preamp with low
-        self-noise is the difference between a take that sounds professional and one that sounds like
-        it was recorded on a laptop mic.
-      </p>
-    </li>
-    <li>
-      <span class="role">04 &middot; Monitor</span>
-      <h3>Closed-back headphones</h3>
-      <p>
-        Closed-back headphones seal around the ear so almost none of the sound leaks back out into the
-        room, which matters because any leakage gets picked up by the microphone as bleed. They're
-        used for tracking (recording) rather than mixing, where open-back headphones are usually
-        preferred for a more natural, less fatiguing sound.
-      </p>
-    </li>
-    <li>
-      <span class="role">05 &middot; Optional</span>
-      <h3>MIDI keyboard/controller</h3>
-      <p>
-        Not needed for voice work, but useful for producers and songwriters sketching toplines,
-        chords or a scratch beat inside their DAW during a demo session.
-      </p>
-    </li>
-    <li>
-      <span class="role">06 &middot; Also in the room</span>
-      <h3>Stands, cables, pop filter & shock mount</h3>
-      <p>
-        A pop filter sits between mouth and mic to break up the blast of air from hard "P" and "B"
-        sounds before it hits the capsule. A shock mount cradles the mic in elastic bands so footsteps,
-        desk knocks and handling noise don't travel up the stand and into the recording. Neither is
-        glamorous, and both matter more than most of the gear around them.
-      </p>
-    </li>
-  </ul>
-
-  <!-- ====== Ad Unit 1 &middot; 4437904610 &middot; Display 300x250 ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-1">
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:300px;height:250px"
-           data-ad-client="ca-pub-2349356292132712"
-           data-ad-slot="4437904610"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <!-- ===== NAV with hardcoded links to /index.html sections ===== -->
+  <nav id="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="logo">Didi&rsquo;s <em>House</em></a>
+      <div class="nav-links" id="navLinks">
+        <!-- all links point to index.html + anchor -->
+        <a href="/#space">The Space</a>
+        <a href="/#sessions">Sessions</a>
+        <a href="/#chain">Signal Chain</a>
+        <a href="/#rates">Rates</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="tag section-tag">Picking your mic</div>
-  <h2>Condenser or dynamic: which one for which job?</h2>
-  <p>
-    The two mic types aren't better or worse than each other; they're suited to different rooms and
-    different jobs. A condenser has a light diaphragm that responds to fine detail, which is exactly
-    why it flatters a well-treated room and exposes a noisy one. It also tends to have a published
-    self-noise spec (the hiss the mic itself adds before anything else is even amplified), and a lower
-    number there is genuinely better. A dynamic mic uses a heavier moving coil that needs more sound
-    pressure to respond, so it naturally rejects more of the room and more off-axis noise, at the cost
-    of some of that fine detail.
-  </p>
-  <ul class="tips-list">
-    <li>
-      <h3>Reach for a condenser when</h3>
-      <p>
-        You're in a treated room, recording something that benefits from nuance &mdash; narration,
-        solo vocals, ADR, anything where the listener is close and attentive.
-      </p>
-    </li>
-    <li>
-      <h3>Reach for a dynamic when</h3>
-      <p>
-        The room isn't fully controlled, you're recording live or on the move, or you want one less
-        variable to manage between takes and between speakers.
-      </p>
-    </li>
-  </ul>
-  <p>
-    Worth knowing either way: most directional mics exhibit some degree of proximity effect, a bass
-    boost that increases the closer you get to the capsule. It's part of why voice over artists can
-    sound so warm and present right up on the mic, and part of why moving even a few centimetres
-    between sentences can change the tone of a recording enough to notice on playback.
-  </p>
-
-  <div class="tag section-tag">The interface</div>
-  <h2>What's actually happening between the mic and your laptop.</h2>
-  <p>
-    An audio interface does three unglamorous jobs at once. It supplies phantom power (a steady 48
-    volts) to condenser mics that need it. It amplifies the tiny electrical signal from the mic up to
-    a usable level through its preamp, which is the single component with the biggest effect on how
-    clean or coloured a recording sounds. And it converts that amplified analogue signal into digital
-    audio your laptop can actually store and edit.
-  </p>
-  <p>
-    That digital conversion happens at a sample rate (how many times per second the signal is
-    measured, commonly 44.1kHz or 48kHz) and a bit depth (how much detail each measurement captures,
-    commonly 16-bit or 24-bit). For voice work, podcasts and anything destined for video, 48kHz at
-    24-bit is the sensible default: it matches video frame rates and leaves enough headroom that a
-    slightly hot take doesn't have to be a ruined one. Latency, the small delay between making a sound
-    and hearing it back through the interface, is worth checking too &mdash; most interfaces offer
-    direct, zero-latency monitoring so you hear yourself in real time rather than a fraction of a
-    second late, which is disorienting fast.
-  </p>
-
-  <!-- ====== Ad Unit 2 &middot; 6164095427 &middot; Display 300x250 ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-2">
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:300px;height:250px"
-           data-ad-client="ca-pub-2349356292132712"
-           data-ad-slot="6164095427"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="tag">Contact</p>
+      <h1>Get in <em>touch</em></h1>
+      <p class="lead">Book a session, ask a question, or enquire about the South African language audiobook rate. We&rsquo;ll get back to you quickly.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="tag section-tag">Before you hit record</div>
-  <h2>Getting a clean take, wherever you're recording.</h2>
-  <p>
-    Good gear helps, but most of what separates a clean take from a muddy one comes down to a few
-    habits that cost nothing.
-  </p>
+  <!-- ===== BOOKING CALENDAR ===== -->
+  <section class="booking" id="book">
+    <div class="wrap">
+      <p class="tag">Book a session</p>
+      <h2>Pick a <em>time</em></h2>
+      <p class="lead">Choose a slot that works for you. You'll get a confirmation with the full address once the booking is made.</p>
+      <div class="cal-holder">
+        <!-- Cal inline embed code begins -->
+        <div id="my-cal-inline-recording-studio-time"></div>
+        <script type="text/javascript">
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+          Cal("init", "recording-studio-time", {origin:"https://app.cal.eu"});
+          Cal.config = Cal.config || {};
+          Cal.config.forwardQueryParams = true;
 
-  <ul class="tips-list">
-    <li>
-      <h3>Treat the room before you treat the mic</h3>
-      <p>
-        Bare walls and hard floors cause reflections that a microphone will happily record. Soft
-        furnishings, curtains, rugs and even a duvet hung on a wardrobe door absorb enough reflected
-        sound to noticeably tighten up a home recording. A closet full of clothes is, acoustically,
-        a surprisingly good vocal booth.
-      </p>
-    </li>
-    <li>
-      <h3>Watch your gain staging</h3>
-      <p>
-        Set the interface's input gain so the loudest peaks sit comfortably below clipping &mdash;
-        roughly -12dB to -6dB on the meter is a safe working range. Too hot and the recording distorts
-        permanently; too quiet and you'll add hiss by boosting it later.
-      </p>
-    </li>
-    <li>
-      <h3>Mic distance and angle</h3>
-      <p>
-        Working slightly off-axis (angled rather than speaking directly into the capsule) reduces
-        plosives on hard "P" and "B" sounds. A pop filter roughly a hand's width from the mic does
-        the rest.
-      </p>
-    </li>
-    <li>
-      <h3>Monitor while you track, not just after</h3>
-      <p>
-        Wearing closed-back headphones during recording, not just during playback, catches problems
-        while they're still fixable: mouth noise, script rustle, a chair creak, timing against a
-        click track.
-      </p>
-    </li>
-    <li>
-      <h3>Grab ten seconds of room tone</h3>
-      <p>
-        Before or after every session, record ten seconds of pure silence in the room. It sounds
-        pointless until an editor needs a noise profile to clean up a rough section, or a few seconds
-        of natural quiet to bridge two edits without an audible jump.
-      </p>
-    </li>
-    <li>
-      <h3>Keep your position consistent</h3>
-      <p>
-        If a project spans more than one sitting, note your distance from the mic and your interface's
-        gain setting. Matching them on the next session avoids an audible level or tone jump between
-        recordings that were meant to sit side by side.
-      </p>
-    </li>
-  </ul>
+          Cal.ns["recording-studio-time"]("inline", {
+            elementOrSelector:"#my-cal-inline-recording-studio-time",
+            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"},
+            calLink: "nick-jackson-didis-house/recording-studio-time",
+          });
 
-  <div class="tag section-tag">By session type</div>
-  <h2>What changes depending on what you're recording.</h2>
-  <ul class="tips-list">
-    <li>
-      <h3>Voice over</h3>
-      <p>
-        Stand rather than sit; it opens the chest and steadies breath support over a long script. Warm
-        up for five minutes before rolling, keep water at room temperature (cold water tightens the
-        throat), and read the whole script once before recording so unfamiliar words don't trip a
-        take halfway through.
-      </p>
-    </li>
-    <li>
-      <h3>Podcasts, solo or two-person</h3>
-      <p>
-        Match input levels between mics before recording starts, not afterwards in the edit. With two
-        people on separate mics, keep enough distance between them that one person's voice doesn't
-        bleed loudly into the other's channel, and agree on a simple signal for "let's redo that"
-        rather than talking over a flubbed line.
-      </p>
-    </li>
-    <li>
-      <h3>Audiobooks</h3>
-      <p>
-        This is a pacing exercise more than a performance one. Mark pickup points as you go rather
-        than trying to nail long passages in a single unbroken take, keep a consistent narrating
-        distance and tone across chapters recorded days apart, and budget more time than feels
-        necessary &mdash; long-form narration is tiring in a way short reads aren't.
-      </p>
-    </li>
-    <li>
-      <h3>Vocals & demos</h3>
-      <p>
-        Track a guide vocal early even if it's rough; it gives a producer or collaborator something to
-        build around. Comping several takes of the same line is normal and expected, so don't chase
-        a single perfect pass when three good ones spliced together will do the job.
-      </p>
-    </li>
-    <li>
-      <h3>Self tapes & auditions</h3>
-      <p>
-        Slate clearly (name, role, take number) at the start of each file so nothing gets mixed up
-        later, and prioritise a clean, consistent read over a heavily produced one &mdash; casting
-        directors are listening for the performance, not the polish.
-      </p>
-    </li>
-    <li>
-      <h3>Content creator narration</h3>
-      <p>
-        Record narration separately from any background music or on-camera audio where possible.
-        Clean, dry narration is far easier to mix, duck under music, or re-time to picture later than
-        anything captured with music already baked in.
-      </p>
-    </li>
-  </ul>
-
-  <!-- ====== Ad Unit 3 &middot; 5106164625 &middot; Display 300x250 ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-3">
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:300px;height:250px"
-           data-ad-client="ca-pub-2349356292132712"
-           data-ad-slot="5106164625"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          Cal.ns["recording-studio-time"]("ui", {
+            "theme":"dark",
+            "hideEventTypeDetails":false,
+            "layout":"month_view",
+            "cssVarsPerTheme":{"dark":{"cal-brand":"#93b074","cal-bg":"#13160f","cal-bg-emphasis":"#1a1e15"}}
+          });
+        </script>
+        <!-- Cal inline embed code ends -->
+      </div>
+      <p style="color: var(--cream-faint); font-size: 13px; margin-top: 16px; font-family: var(--mono);">Prefer to chat first? Use the form or WhatsApp below.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="tag section-tag">Troubleshooting</div>
-  <h2>The most common problems, and the fast fix.</h2>
-  <ul class="tips-list">
-    <li>
-      <h3>Plosive pops on "P" and "B" sounds</h3>
-      <p>
-        Add or reposition a pop filter, and try speaking slightly across the mic rather than straight
-        into it.
-      </p>
-    </li>
-    <li>
-      <h3>A faint echo or boxy tone</h3>
-      <p>
-        The room, not the mic, is almost always the cause. Add soft furnishings, move away from bare
-        walls and hard corners, or record inside a closet full of clothes as a quick fix.
-      </p>
-    </li>
-    <li>
-      <h3>A constant background hum</h3>
-      <p>
-        Often a ground loop between the interface and other plugged-in electronics. Try a different
-        power outlet, unplug nearby chargers and appliances, and rule out fluorescent lighting or a
-        fridge compressor cycling nearby.
-      </p>
-    </li>
-    <li>
-      <h3>Clipping or crackling on loud peaks</h3>
-      <p>
-        The input gain is set too high. Bring it down until the loudest moment in the take sits
-        comfortably below the red on the meter, then do a quick level check before recording for real.
-      </p>
-    </li>
-    <li>
-      <h3>Levels that jump between takes</h3>
-      <p>
-        Usually a mic distance problem rather than a gain problem. Mark your standing spot with tape
-        on the floor so it's identical take to take.
-      </p>
-    </li>
-    <li>
-      <h3>Mouth clicks and dry-mouth noise</h3>
-      <p>
-        Water at room temperature, an apple slice before a long session, and a short break every
-        twenty minutes or so all help more than most people expect.
-      </p>
-    </li>
-    <li>
-      <h3>Headphone bleed into the recording</h3>
-      <p>
-        Turn the headphone monitor volume down slightly and confirm the cups are sealing fully around
-        the ear, especially with glasses or thick hair in the way.
-      </p>
-    </li>
-  </ul>
+  <!-- ===== CONTENT: FORM + SIDE INFO ===== -->
+  <section class="wrap contact-grid">
+    <!-- LEFT: form -->
+    <div class="contact-form">
+      <form action="https://formspree.io/f/xqevjvno" method="POST">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Didi" required />
 
-  <!-- ====== Ad Unit 4 &middot; 2827485645 &middot; Display, auto/full-width ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-4" style="min-height:140px;">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-2349356292132712"
-           data-ad-slot="2827485645"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="+27 82 123 4567" />
+
+        <label for="subject">What&rsquo;s this about?</label>
+        <input type="text" id="subject" name="subject" placeholder="Booking / Audiobook / Question" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us what you'd like to record, when you're thinking of, and any special requests..."></textarea>
+
+        <button type="submit" class="btn btn-fill">Send message</button>
+      </form>
+      <p style="color: var(--cream-faint); font-size: 13px; margin-top: 16px; font-family: var(--mono);">We reply within a few hours, usually sooner.</p>
     </div>
-  </div>
 
-  <div class="tag section-tag">Reference</div>
-  <h2>Recording terms, plainly explained.</h2>
-  <ul class="gear-list">
-    <li>
-      <span class="role">Term</span>
-      <h3>DAW (Digital Audio Workstation)</h3>
-      <p>The software used to record, edit and mix audio &mdash; Reaper, Logic, Cubase, Ableton, FL Studio, Audacity and Pro Tools are common examples.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Phantom power</h3>
-      <p>A steady 48V supplied by an interface or mixer, required by most condenser microphones to operate at all.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Gain staging</h3>
-      <p>Setting input levels so a signal is strong enough to sound clean, without being so hot that peaks distort.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Sample rate & bit depth</h3>
-      <p>How often (sample rate) and how precisely (bit depth) a digital recording measures the incoming analogue signal. 48kHz/24-bit is a common standard for spoken word and video.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Latency</h3>
-      <p>The small delay between a sound happening and it being heard back through a monitoring system.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Proximity effect</h3>
-      <p>The bass boost that occurs on many directional mics as a speaker moves closer to the capsule.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Self-noise</h3>
-      <p>The faint hiss a microphone itself introduces before any external sound reaches it. Lower is better.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Room tone</h3>
-      <p>A short recording of pure silence in a room, used by editors to smooth cuts and clean up noisy sections.</p>
-    </li>
-  </ul>
+    <!-- RIGHT: studio info + quick links -->
+    <div class="contact-side">
+      <div class="card">
+        <h2>📞 Call or WhatsApp</h2>
+        <p><a href="https://wa.me/27823052664" target="_blank" rel="noopener">+27 82 305 2664</a></p>
+        <p><a href="tel:+27823052664">+27 82 305 2664</a></p>
+        <div style="margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px;">
+          <p style="color: var(--cream); font-weight: 400;">Weekdays · 8am – 5pm</p>
+          <p style="color: var(--cream-faint); font-size: 14px;">Sessions by appointment, same-day often possible.</p>
+        </div>
+      </div>
 
-  <!-- ====== Ad Unit 5 &middot; 3833480941 &middot; In-article, fluid ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-5" style="min-height:100px;">
-      <ins class="adsbygoogle"
-           style="display:block; text-align:center;"
-           data-ad-layout="in-article"
-           data-ad-format="fluid"
-           data-ad-client="ca-pub-2349356292132712"
-           data-ad-slot="3833480941"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <div class="card">
+        <h2>📍 Find the studio</h2>
+        <p>Kensington B, Randburg</p>
+        <p style="color: var(--cream-faint); font-size: 14px;">Easy from Sandton, Bryanston, Fourways, Northcliff, Rosebank and most of Joburg north.</p>
+        <div class="chip-group">
+          <span>Off-street parking</span>
+          <span>WiFi</span>
+          <span>Garden</span>
+        </div>
+        <p style="margin-top: 12px; font-size: 14px; color: var(--cream-faint);">The full address is sent with your booking confirmation.</p>
+        <div class="map-holder" style="margin-top:16px; border-radius:6px; overflow:hidden; border:1px solid var(--line); height:340px; background:#fff;">
+          <gmpx-store-locator map-id="DEMO_MAP_ID" style="width:100%; height:100%; display:block;
+            --gmpx-color-surface:#fff;
+            --gmpx-color-on-surface:#212121;
+            --gmpx-color-on-surface-variant:#757575;
+            --gmpx-color-primary:#6d8a5b;
+            --gmpx-color-outline:#e0e0e0;
+            --gmpx-fixed-panel-height-column-layout:0%;
+            --gmpx-font-family-base:'Hanken Grotesk', sans-serif;
+            --gmpx-font-family-headings:'Fraunces', serif;
+            --gmpx-font-size-base:0.875rem;"></gmpx-store-locator>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>🎙️ Quick rates</h2>
+        <p><span class="highlight">R700/hr</span> — all gear included</p>
+        <p><span class="highlight">R350/hr</span> — South African language audiobooks</p>
+        <div style="margin-top: 12px;">
+          <a href="https://wa.me/27823052664?text=Hi%21%20I%27d%20like%20to%20book%20a%20session%20at%20Didi%27s%20House." class="btn btn-fill" style="padding: 12px 24px; font-size: 11px; margin-right: 8px;" target="_blank" rel="noopener">Book now</a>
+          <a href="/#rates" class="btn btn-outline" style="padding: 12px 24px; font-size: 11px;">See details</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="closing">
-    <p>
-      This is roughly the setup running in the booth at Didi's House in Kensington B, Randburg: an
-      AKG P220 condenser and Shure SM58 dynamic, an Audient iD14 interface, Audio-Technica ATH-M20X
-      headphones and an Akai MPK Mini for anyone who needs keys. If you'd rather skip assembling any
-      of this yourself, the room is booked by the hour with everything above included &mdash;
-      details are on the <a href="/" style="color:#93b074;">studio's main page</a>.
-    </p>
-  </div>
+  <!-- ===== FOOTER (mirror) ===== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <div class="foot-logo">Didi&rsquo;s <em>House</em></div>
+          <p style="margin-top:14px; max-width:34ch;">A semi-professional recording studio in Kensington B, Randburg. </p>
+          <p>P.S. Didi is the cat.</p>
+        </div>
+        <div class="foot-col">
+          <h3>Find it</h3>
+          <p>Kensington B</p>
+          <p>Randburg</p>
+          <p>Johannesburg, South Africa</p>
+        </div>
+        <div class="foot-col">
+          <h3>Get in touch</h3>
+          <a href="https://wa.me/27823052664" target="_blank" rel="noopener noreferrer">WhatsApp +27 82 305 2664</a>
+          <a href="tel:+27823052664">+27 82 305 2664</a>
+          <a href="https://www.facebook.com/recordingstudiocoza" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="/support-for-free.html">Support the studio for free</a>
+          <p style="margin-top:12px;">Weekdays 8am to 5pm, by appointment</p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 Didi&rsquo;s House · Kensington B, Randburg</span>
+        <span><a href="/privacy.html" style="color:var(--cream-faint);">Privacy policy</a> &nbsp;·&nbsp; <a href="/">recordingstudio.co.za</a></span>
+      </div>
+    </div>
+  </footer>
 
-  </article>
+  <!-- Google Maps Locator Plus (Extended Component Library) -->
+  <script>
+    const CONFIGURATION = {
+      "locations": [
+        {"title":"Didi's House Recording Studio","address1":"Kensington B","address2":"Randburg, Johannesburg, 2194, South Africa","coords":{"lat":-26.0763828,"lng":27.9997111}}
+      ],
+      "mapOptions": {"center":{"lat":-26.0763828,"lng":27.9997111},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":14,"zoomControl":true,"maxZoom":17,"mapId":""},
+      "mapsApiKey": "AIzaSyCnmSHWbDZeTZSxXWsTT5NB2OmEoHzpJbw",
+      "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+    };
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.15/index.min.js"></script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', async () => {
+      await customElements.whenDefined('gmpx-store-locator');
+      const locator = document.querySelector('gmpx-store-locator');
+      if (locator) locator.configureFromQuickBuilder(CONFIGURATION);
+    });
+  </script>
+  <gmpx-api-loader key="AIzaSyCnmSHWbDZeTZSxXWsTT5NB2OmEoHzpJbw" solution-channel="GMP_QB_locatorplus_v11_c"></gmpx-api-loader>
 
-  <!-- ====== FOOTNOTE ====== -->
-  <div class="footnote">
-    <span>Didi's House &middot; Kensington B, Randburg</span>
-    <span>
-      <a href="/contact.html">&larr; back to contact page</a> &middot;
-      <a href="/">studio home</a>
-    </span>
-  </div>
-
-</div> <!-- .wrap -->
+  <!-- small script: nav toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          toggle.classList.toggle('open');
+          links.classList.toggle('open');
+        });
+        links.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            toggle.classList.remove('open');
+            links.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
