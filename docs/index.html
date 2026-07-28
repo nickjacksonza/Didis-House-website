@@ -40,6 +40,7 @@
 <link rel="preconnect" href="https://maps.googleapis.com">
 <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://app.cal.eu">
 <!-- DNS prefetch for analytics (no full TLS needed at parse time) -->
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://www.clarity.ms">
@@ -62,11 +63,37 @@
     region: ['ZA'],
     wait_for_update: 500
   });
-    // Check if the user previously accepted consent
-  if (localStorage.getItem('cookie_consent') === 'granted') {
+
+  // Consent record is written by the banner at the end of <body>.
+  window.CC_KEY = 'cc_consent_v1';
+  window.ccRead = function () {
+    try { return JSON.parse(localStorage.getItem(window.CC_KEY) || 'null'); }
+    catch (e) { return null; }
+  };
+
+  // Clarity sets its own cookies, so it is only injected once analytics
+  // consent exists. Called from here on repeat visits, and from the
+  // banner's apply() the moment a visitor accepts.
+  window.loadClarity = function () {
+    if (window.clarityLoaded) return;
+    window.clarityLoaded = true;
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xaz5uwt4o2");
+  };
+
+  // Restore a previous choice before gtag.js fires its first page_view.
+  var ccSaved = window.ccRead();
+  if (ccSaved) {
     gtag('consent', 'update', {
-      'analytics_storage': 'granted'
+      analytics_storage:  ccSaved.analytics ? 'granted' : 'denied',
+      ad_storage:         ccSaved.marketing ? 'granted' : 'denied',
+      ad_user_data:       ccSaved.marketing ? 'granted' : 'denied',
+      ad_personalization: ccSaved.marketing ? 'granted' : 'denied'
     });
+    if (ccSaved.analytics) window.loadClarity();
   }
 </script>
 <!-- Google tag (gtag.js) —  async -->
@@ -817,16 +844,20 @@
   }
   #cc-banner .cc-accept{ background:#d82a3a; color:#fff; }
   #cc-banner .cc-reject{ background:transparent; color:#e8e8e8; }
+
+  /* Cal floating button sits under the grain overlay and clears the
+     cookie banner while that is on screen. */
+  cal-floating-button { z-index: 95; }
+  body:has(#cc-banner:not([hidden])) cal-floating-button {
+    bottom: 150px;
+    transition: bottom 0.3s ease;
+  }
+  @media (max-width: 600px) {
+    body:has(#cc-banner:not([hidden])) cal-floating-button { bottom: 210px; }
+  }
 </style>
   <meta name="msvalidate.01" content="4364FE4C110763FD9588A5AB6D7C1676" />
-  <!-- Clarity tracking code for https://recordingstudio.co.za/ -->
-<script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xaz5uwt4o2");
-</script>
+  <!-- Clarity loads via window.loadClarity(), gated on analytics consent. -->
 </head>
 <body id="top">
 
@@ -1701,7 +1732,7 @@ if (hasGsap && !reduceMotion) {
 </script>
 <script>
 (function(){
-  var KEY = 'cc_consent_v1';
+  var KEY = window.CC_KEY;
   var banner = document.getElementById('cc-banner');
  
   function gtag(){ dataLayer.push(arguments); }
@@ -1715,6 +1746,7 @@ if (hasGsap && !reduceMotion) {
       analytics_storage: state.analytics ? 'granted' : 'denied'
     });
     dataLayer.push({ event: 'cc_consent_update', consent: state });
+    if (state.analytics && window.loadClarity) window.loadClarity();
     banner.hidden = true;
   }
  
@@ -1739,5 +1771,31 @@ if (hasGsap && !reduceMotion) {
   window.openCookieSettings = function(){ banner.hidden = false; };
 })();
 </script>
+
+<!-- Cal floating-popup embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+  Cal("init", "recording-studio-time", {origin:"https://app.cal.eu"});
+  Cal.config = Cal.config || {};
+  Cal.config.forwardQueryParams = true;
+
+  Cal.ns["recording-studio-time"]("floatingButton", {
+    "calLink":"nick-jackson-didis-house/recording-studio-time",
+    "config":{"layout":"week_view","useSlotsViewOnSmallScreen":"true","theme":"dark"},
+    "buttonText":"Book a session",
+    "hideButtonIcon":false,
+    "buttonPosition":"bottom-right",
+    "buttonColor":"#93b074",
+    "buttonTextColor":"#1d130a"
+  });
+
+  Cal.ns["recording-studio-time"]("ui", {
+    "theme":"dark",
+    "hideEventTypeDetails":false,
+    "layout":"week_view",
+    "cssVarsPerTheme":{"dark":{"cal-brand":"#93b074","cal-bg":"#13160f","cal-bg-emphasis":"#1a1e15"}}
+  });
+</script>
+<!-- Cal floating-popup embed code ends -->
 </body>
 </html>
