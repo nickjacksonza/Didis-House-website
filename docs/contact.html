@@ -16,6 +16,12 @@
       region: ['ZA'],
       wait_for_update: 500
     });
+      // Check if the user previously accepted consent
+  if (localStorage.getItem('cookie_consent') === 'granted') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+  }
   </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXDRQXGGB1"></script>
