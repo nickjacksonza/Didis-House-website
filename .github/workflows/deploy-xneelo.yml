@@ -46,7 +46,7 @@ jobs:
           sed -i -E 's#(href|src)="/#\1="./#g' *.html
           sed -i 's#"src":"/#"src":"#g' site.webmanifest
           echo "Staged files:"; find . -type f | sort
-          ! find . -name '.*' | grep -q . || { echo "::error::dotfile leaked into staging"; exit 1; }
+          ! find . -mindepth 1 -name '.*' | grep -q . || { echo "::error::dotfile leaked into staging"; exit 1; }
 
       - name: Upload to ${{ vars.XNEELO_DIR }} (no deletes)
         run: |
