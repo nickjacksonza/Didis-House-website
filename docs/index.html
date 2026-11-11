@@ -46,8 +46,9 @@
 <link rel="dns-prefetch" href="https://www.clarity.ms">
 
 <link rel="privacy-policy" href="https://recordingstudio.co.za/privacy.html">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,560;0,9..144,640;1,9..144,420;1,9..144,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="didis-house-outdoor-pic.avif" type="image/avif">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,72,420;0,72,560;0,72,640;1,72,420;1,72,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="didis-house-outdoor-pic-portrait.avif" type="image/avif" media="(orientation: portrait)">
+<link rel="preload" as="image" href="didis-house-outdoor-pic.avif" type="image/avif" media="(orientation: landscape)">
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="aX/X5xGFcsaMZwavAO1oMw" async></script>
 <!-- ===== Consent Mode v2 default-deny. ===== -->
 <script>
@@ -337,20 +338,6 @@
     background: linear-gradient(90deg, var(--brick), var(--sage));
     transform: scaleX(0); transform-origin: 0 50%;
   }
-
-  /* ---- intro veil ---- */
-  #veil {
-    position: fixed; inset: 0; z-index: 150; background: var(--ink);
-    display: none; align-items: center; justify-content: center; flex-direction: column; gap: 22px;
-  }
-  html.js #veil { display: flex; }
-  #veil .veil-logo {
-    font-family: var(--serif); font-style: italic; font-weight: 420;
-    font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--cream); letter-spacing: -0.01em;
-  }
-  #veil .veil-line { width: 120px; height: 1px; background: var(--line); overflow: hidden; position: relative; }
-  #veil .veil-line span { position: absolute; inset: 0; background: var(--sage); transform: scaleX(0); transform-origin: 0 50%; }
-  #veil .veil-sub { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream-faint); }
 
   /* ---- threshold flare ---- */
   #flare {
@@ -726,6 +713,9 @@
     background-image: url('didis-house-outdoor-pic.avif');
     background-size: cover; background-position: 55% 75%;
   }
+  @media (orientation: portrait) {
+    .closing-bg { background-image: url('didis-house-outdoor-pic-portrait.avif'); background-position: 50% 75%; }
+  }
   .closing-bg::after {
     content: ''; position: absolute; inset: 0;
     background:
@@ -855,12 +845,6 @@
 </head>
 <body id="top">
 
-<div id="veil" aria-hidden="true">
-  <div class="veil-logo">Didi&rsquo;s House</div>
-  <div class="veil-line"><span></span></div>
-  <div class="veil-sub">Kensington B · Randburg</div>
-</div>
-
 <div id="progress" aria-hidden="true"></div>
 <div id="flare" aria-hidden="true"></div>
 <div id="zoomPane" aria-hidden="true"></div>
@@ -892,7 +876,10 @@
 <header class="hero" id="arrival">
   <div class="hero-stage">
     <div class="hero-photo" id="heroPhoto">
-      <img src="didis-house-outdoor-pic.avif" alt="Didi's House Recording Studio exterior, Kensington B, Randburg, Johannesburg" width="1620" height="1080" id="heroImg" fetchpriority="high">
+      <picture>
+        <source media="(orientation: portrait)" srcset="didis-house-outdoor-pic-portrait.avif" type="image/avif">
+        <img src="didis-house-outdoor-pic.avif" alt="Didi's House Recording Studio exterior, Kensington B, Randburg, Johannesburg" width="1620" height="1080" id="heroImg" fetchpriority="high">
+      </picture>
     </div>
     <div class="hero-shade"></div>
     <div class="hero-dark" id="heroDark"></div>
@@ -1250,30 +1237,6 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   /* ------------------------------------------------------------------
-     Intro veil
-  ------------------------------------------------------------------ */
-  var veil = document.getElementById('veil');
-  var veilBar = veil ? veil.querySelector('.veil-line span') : null;
-  function dropVeil() {
-    if (!veil || veil.dataset.done) return;
-    veil.dataset.done = '1';
-    if (hasGsap && !reduceMotion) {
-      gsap.to(veilBar, { scaleX: 1, duration: 0.35, ease: 'power2.out' });
-      gsap.to(veil, { autoAlpha: 0, duration: 0.9, delay: 0.4, ease: 'power2.inOut',
-        onComplete: function () { veil.remove(); } });
-    } else {
-      veil.remove();
-    }
-  }
-  if (veilBar && hasGsap && !reduceMotion) {
-    gsap.to(veilBar, { scaleX: 0.7, duration: 1.6, ease: 'power1.out' });
-  }
-  var heroImg = document.getElementById('heroImg');
-  if (heroImg && heroImg.complete) { dropVeil(); }
-  else if (heroImg) { heroImg.addEventListener('load', dropVeil); heroImg.addEventListener('error', dropVeil); }
-  setTimeout(dropVeil, 2200); // never trap the visitor
-
-  /* ------------------------------------------------------------------
      Nav
   ------------------------------------------------------------------ */
   var nav = document.getElementById('nav');
@@ -1446,7 +1409,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // hero intro
     gsap.from('#heroContent .wrap > *', {
-      y: 36, autoAlpha: 0, duration: 1.1, stagger: 0.09, ease: 'power3.out', delay: 0.55
+      y: 36, autoAlpha: 0, duration: 1.1, stagger: 0.09, ease: 'power3.out', delay: 0.1
     });
 
     // THE ARRIVAL: push in toward the glass doors, flare, cross the threshold
