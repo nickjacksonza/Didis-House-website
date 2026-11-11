@@ -154,6 +154,11 @@
     dl.terms dd { color: #cfc8b4; max-width: 60ch; }
     @media (max-width: 600px) { dl.terms { grid-template-columns: 1fr; gap: 0.1rem; } dl.terms dd { margin-bottom: 0.8rem; } }
 
+    /* checklist */
+    ul.check { list-style: none; margin: 1.2rem 0 1.5rem; }
+    ul.check li { position: relative; padding: 0.55rem 0 0.55rem 2rem; border-bottom: 1px solid rgba(242,234,217,0.07); max-width: 66ch; }
+    ul.check li::before { content: ''; position: absolute; left: 0.1rem; top: 0.85rem; width: 0.95rem; height: 0.95rem; border: 1.5px solid #93b074; border-radius: 3px; }
+
     /* booking notes */
     .note { border: 1px solid rgba(147,176,116,0.35); background: rgba(147,176,116,0.06); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.5rem 0; }
     .note p { margin: 0; }
@@ -235,8 +240,10 @@
       <li><a href="#gear">What gear do you need to record a voice?</a></li>
       <li><a href="#mics">Condenser or dynamic: which mic should you use?</a></li>
       <li><a href="#settings">Which settings and file formats should you use?</a></li>
+      <li><a href="#before">How should you prepare for a session?</a></li>
       <li><a href="#habits">How do you get a clean take?</a></li>
       <li><a href="#sessions">What changes for each type of recording?</a></li>
+      <li><a href="#delivery">What should you check before you send your files?</a></li>
       <li><a href="#problems">Why does my recording sound wrong?</a></li>
       <li><a href="#terms">Recording terms</a></li>
     </ol>
@@ -254,7 +261,7 @@
     far away. Editing software can&rsquo;t fully remove them, so the room comes first. A modest mic
     in a treated booth will beat an expensive one in a kitchen.
   </p>
-  <p>After the room, you need a mic, an interface, headphones and something to record on. This is what&rsquo;s in the booth, and why.</p>
+  <p>After the room, you need a mic, an interface, headphones and something to record on. This is what&rsquo;s in the studio, and why each piece is there.</p>
 
   <ul class="gear">
     <li>
@@ -285,6 +292,18 @@
           with a loud voice. In the booth it is the mic for a second podcast guest, or for a singer who is
           too loud for the condenser. It hears less of the room, has a pop filter built into its round
           grille, and needs no phantom power.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">Second condenser</span>
+        <h3>Audio-Technica AT2020</h3>
+        <p>
+          Billie Eilish&rsquo;s vocals on &ldquo;Ocean Eyes&rdquo; were recorded on one of these, in her
+          brother Finneas&rsquo;s bedroom, in 2015. Finneas later moved her to a Neumann TLM 103, and he has
+          called the AT2020 a great first mic for what it costs. Its 16 mm diaphragm is smaller than the P220&rsquo;s, and the two mics sound noticeably different on the same voice. It also hisses a little more (20 dB(A)
+          self-noise against the P220&rsquo;s 16), which you are unlikely to notice on a normal voice. Having two condensers means two people can both record on one. You can also try the same line on each and keep whichever suits your voice. Like the P220, it needs phantom power.
         </p>
       </div>
     </li>
@@ -329,6 +348,29 @@
           You won&rsquo;t need it for voice work. It&rsquo;s there for songwriters and producers who want
           to sketch a melody or a beat between takes. Akai calls the MPK Mini the best-selling USB MIDI keyboard in the world. The appeal is easy to see: 25 small keys, eight drum pads and eight knobs in something smaller than a laptop. This is the 2020 MK3 version, and it plugs into most
           recording software without any drivers.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">In the booth</span>
+        <h3>Yamaha keyboard on a stand</h3>
+        <p>
+          A full keyboard sits on a stand inside the booth, so singers can find a starting note or play
+          along while they warm up. It also helps with harmonies: play the part a few times, then sing it.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">On the producer desk</span>
+        <h3>Blue Yeti USB mic</h3>
+        <p>
+          The Yeti plugs straight into a computer by USB, with no interface needed. That makes it the quickest way to catch an idea before it disappears. Billie Eilish and Finneas used one while
+          demoing songs. It has three capsules and four pickup patterns, including one for two people facing
+          each other across a table. It records at 48 kHz, 16-bit. That is fine for demos, scratch vocals
+          and notes to yourself. For a final take, use the P220 or AT2020 through the iD14, which records
+          at 24-bit.
         </p>
       </div>
     </li>
@@ -442,6 +484,44 @@
     <p class="brk-note"></p>
   </aside>
 
+  <section id="before">
+  <div class="tag section-tag">Before your session</div>
+  <h2>How should you prepare for a session?</h2>
+  <p>Ten minutes of preparation the day before saves a lot of studio time.</p>
+  <h3>Get the spec from your client first</h3>
+  <p>
+    Ask for the file format, sample rate, file names and any loudness target before you book. Knowing them on the day lets you set up the project correctly from the start. You won&rsquo;t need to convert or rename files afterwards. The <a href="#settings">table above</a> lists what most
+    clients and platforms expect.
+  </p>
+  <h3>Set up your laptop at home</h3>
+  <p>
+    Charge your laptop, bring the charger and install any updates the night before. An update that
+    starts mid-session can eat half an hour. Create an empty project at the right sample rate, and
+    check you have a free USB port for the interface, or bring an adapter.
+  </p>
+  <h3>Prepare the script</h3>
+  <p>
+    Read it aloud at least once. Mark the words you trip over and check how to pronounce names,
+    places and brand names with the client. Bring the script on a tablet with its sound off, or
+    printed on loose single-sided pages: stapled pages rustle when you turn them.
+  </p>
+  <h3>Look after your voice</h3>
+  <p>
+    Water you drink doesn&rsquo;t touch your vocal folds. It reaches them through your body over several hours, so drink plenty the day before. On the day, keep a bottle nearby and sip between takes to stop your mouth drying out and clicking.
+  </p>
+  <h3>Wear quiet clothes</h3>
+  <p>
+    A sensitive mic picks up rustling jackets, jingling bracelets and squeaky shoes. Soft cotton and
+    bare wrists are the safest choice.
+  </p>
+  <h3>Plan where your files go</h3>
+  <p>
+    Your recordings are saved on your own laptop. Bring a USB stick or have a cloud folder ready, so
+    you can copy the session to a second place before you leave.
+  </p>
+  <div class="note"><p><strong>First time in a booth?</strong> Say so when you book. Setup help and a basic edit are part of the hour. There&rsquo;s parking on the property, and coffee and tea are on hand.</p></div>
+  </section>
+
   <section id="habits">
   <div class="tag section-tag">Before and during the take</div>
   <h2>How do you get a clean take?</h2>
@@ -468,17 +548,11 @@
     You&rsquo;ll hear a rustled page, a creaking chair or a stomach rumble while you can still redo
     the line.
   </p>
-  <h3>Use a tablet or loose pages for the script</h3>
-  <p>
-    Turning pages makes noise, and the mic hears it. A tablet with its sound off is silent. If you
-    print, use loose single-sided pages and slide each one aside between lines.
-  </p>
   <h3>Record ten seconds of room tone</h3>
   <p>
     At the start or end of the session, record the room with nobody speaking. Every room has its own faint sound, and that is what you are capturing. Editors use it to fill gaps between edits so they don&rsquo;t
     drop into dead silence, and noise-reduction tools use it to learn what to remove.
   </p>
-  <div class="note"><p><strong>First time in a booth?</strong> Say so when you book. Setup help and a basic edit are part of the hour, not an extra.</p></div>
   </section>
 
   <section id="sessions">
@@ -517,6 +591,26 @@
     Record your voice on its own, without music. A clean voice track is far easier to mix under
     music or move to fit the picture later.
   </p>
+  </section>
+
+  <section id="delivery">
+  <div class="tag section-tag">After the session</div>
+  <h2>What should you check before you send your files?</h2>
+  <p>
+    Clients reject files for small, avoidable reasons more often than for the performance. Run
+    through this list before you send anything.
+  </p>
+  <ul class="check">
+    <li>Listen to the whole recording once on headphones at a normal volume, and mark any clicks, bumps or background noises to fix.</li>
+    <li>Remove distracting noises such as loud breaths, mouth clicks and page turns. Leave quiet natural breaths in: a voice without them sounds odd.</li>
+    <li>Trim the start and end of each file, leaving any room tone the client asks for. For Audible, that is half a second to one second at the start and one to five seconds at the end.</li>
+    <li>Check the levels. Peaks should stay below the client&rsquo;s limit: &minus;3 dB for Audible, about &minus;1 dB for podcasts. Match the loudness target if there is one.</li>
+    <li>Export in the format asked for: file type, sample rate and bit depth. See the <a href="#settings">delivery table</a>.</li>
+    <li>Name the files exactly as asked. Number them with leading zeros, such as 01, 02 and 03, so they sort in the right order.</li>
+    <li>Play back the exported files themselves, start to finish. Exports sometimes cut off the last word or come out at the wrong sample rate.</li>
+    <li>Send a short note with the files, listing what is included and any lines you recorded in more than one way.</li>
+    <li>Keep the project and raw recordings until the client signs off, in case they ask for changes or pickups.</li>
+  </ul>
   </section>
 
   <aside class="brk" aria-label="Advertisement">
