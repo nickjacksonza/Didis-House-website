@@ -3,9 +3,10 @@ name: Deploy to Xneelo (SFTP)
 # PRs: dry-run only (uploads nothing). Push to main / manual run: upload changed files. Never deletes remote files.
 on:
   pull_request:
-    paths-ignore: ['**.md']
+    paths: ['docs/**', '.deployignore', '.github/workflows/deploy-xneelo.yml']
   push:
     branches: [main]
+    paths: ['docs/**', '.deployignore', '.github/workflows/deploy-xneelo.yml']
   workflow_dispatch:
 
 concurrency:
@@ -35,13 +36,17 @@ jobs:
           [ -n "$PASS" ] || { echo "::error::XNEELO_PASSWORD secret is not set for this repo"; exit 1; }
           mkdir -p ~/.ssh && printf '%s\n' '${{ vars.XNEELO_HOSTKEY }}' > ~/.ssh/known_hosts
 
-      - name: Stage publishable files (no dotfiles, docs, secrets; honours .deployignore)
+      - name: Stage docs/ (the site served at recordingstudio.co.za)
         run: |
           EX=""; [ -f .deployignore ] && EX="--exclude-from=.deployignore"
-          rsync -a $EX --exclude='.*' --exclude='_backup-*' --exclude='*.md' --exclude='LICENSE' \
-            --exclude='*.pem' --exclude='*.key' --exclude='node_modules' --exclude='package*.json' ./ "$RUNNER_TEMP/site/"
-          echo "Staged files:"; (cd "$RUNNER_TEMP/site" && find . -type f | sort)
-          ! find "$RUNNER_TEMP/site" -name '.*' | grep -q . || { echo "::error::dotfile leaked into staging"; exit 1; }
+          rsync -a $EX --exclude='.*' --exclude='*.md' --exclude='*.pem' --exclude='*.key' docs/ "$RUNNER_TEMP/site/"
+          # The pages use root-relative links (/contact.html), which break under the
+          # /DidisHouse/ subfolder. Rewrite them to relative links in the staged copy only.
+          cd "$RUNNER_TEMP/site"
+          sed -i -E 's#(href|src)="/#\1="./#g' *.html
+          sed -i 's#"src":"/#"src":"#g' site.webmanifest
+          echo "Staged files:"; find . -type f | sort
+          ! find . -mindepth 1 -name '.*' | grep -q . || { echo "::error::dotfile leaked into staging"; exit 1; }
 
       - name: Upload to ${{ vars.XNEELO_DIR }} (no deletes)
         run: |
