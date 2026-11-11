@@ -1,10 +1,10 @@
 # Didis-House-website
 
-Recording Studio website
+Website for Didi's House Recording Studio. The site is in `docs/` and is live at https://recordingstudio.co.za/. See [PROJECT.md](PROJECT.md).
 
 ## Status
 
-Work in progress.
+Live.
 
 ## License
 
