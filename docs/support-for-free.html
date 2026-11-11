@@ -50,7 +50,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,72,420;0,72,560;0,72,640;1,72,420;1,72,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 
   <!-- AdSense script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2349356292132712" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2349356292132712" crossorigin="anonymous"
+    onload="document.documentElement.classList.add('ads-ok')" onerror="document.documentElement.classList.add('ads-off')"></script>
 
   <!-- Article schema for AEO/SEO -->
   <script type="application/ld+json">
@@ -223,7 +224,7 @@
     }
     .ad-placeholder {
       width: 100%;
-      min-height: 280px;
+      min-height: 90px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -242,6 +243,10 @@
     .rail-left { left: 28px; }
     .rail-right { right: 28px; }
     .rail .ad-label { margin-bottom: 0.6rem; }
+    /* Reserve full ad height only once AdSense has loaded, so text doesn't jump when an ad arrives */
+    html.ads-ok .ad-placeholder { min-height: 280px; }
+    /* AdSense blocked (ad blocker, network): hide every ad box */
+    html.ads-off .inline-ad, html.ads-off .rail { display: none; }
     /* If Google has no ad to show, AdSense marks the slot "unfilled": hide the whole box */
     .inline-ad:has(ins.adsbygoogle[data-ad-status="unfilled"]),
     .rail:has(ins.adsbygoogle[data-ad-status="unfilled"]) { display: none; }
