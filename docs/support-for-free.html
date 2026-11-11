@@ -29,9 +29,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recording Studio Equipment & Session Guide | Didi's House</title>
-  <meta name="description" content="An in-depth, plain-English guide to recording studio equipment, mic choice, gain staging and session technique for voice over, podcasts, audiobooks and demos, from Didi's House Recording Studio in Randburg.">
+  <meta name="description" content="A plain-English guide to studio gear, choosing a mic, setting levels and session technique for voice over, podcasts, audiobooks and demos.">
   <link rel="canonical" href="https://recordingstudio.co.za/support-for-free.html">
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Didi's House Recording Studio">
+  <meta property="og:title" content="Recording Studio Equipment &amp; Session Guide">
+  <meta property="og:description" content="A plain-English guide to studio gear, choosing a mic, setting levels and session technique for voice over, podcasts, audiobooks and demos.">
+  <meta property="og:url" content="https://recordingstudio.co.za/support-for-free.html">
+  <meta property="og:image" content="https://recordingstudio.co.za/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Didi's House Recording Studio exterior, Kensington B, Randburg, Johannesburg">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
   <!-- Google Fonts + base styling reused from main site, slightly compact -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,13 +59,17 @@
     "@type": "Article",
     "headline": "Recording Studio Equipment & Session Guide",
     "description": "An in-depth guide to recording studio equipment, mic choice, gain staging and session technique for voice over, podcasts, audiobooks and demos.",
-    "author": { "@type": "Organization", "name": "Didi's House" },
+    "author": { "@type": "Organization", "name": "Didi's House", "url": "https://recordingstudio.co.za/" },
     "publisher": {
       "@type": "Organization",
       "name": "Didi's House",
       "url": "https://recordingstudio.co.za/"
     },
     "mainEntityOfPage": "https://recordingstudio.co.za/support-for-free.html",
+    "image": "https://recordingstudio.co.za/og-image.jpg",
+    "datePublished": "2026-07-07",
+    "dateModified": "2026-11-11",
+    "inLanguage": "en-ZA",
     "about": ["recording studio equipment", "audio interfaces", "condenser microphones", "voice over recording", "podcast recording", "audiobook recording", "gain staging"]
   }
   </script>
@@ -207,7 +223,7 @@
     }
     .ad-placeholder {
       width: 100%;
-      min-height: 90px;
+      min-height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -226,7 +242,11 @@
     .rail-left { left: 28px; }
     .rail-right { right: 28px; }
     .rail .ad-label { margin-bottom: 0.6rem; }
-    @media (max-width: 1440px) {
+    /* If Google has no ad to show, AdSense marks the slot "unfilled": hide the whole box */
+    .inline-ad:has(ins.adsbygoogle[data-ad-status="unfilled"]),
+    .rail:has(ins.adsbygoogle[data-ad-status="unfilled"]) { display: none; }
+
+    @media (max-width: 1440px), (max-height: 800px) {
       .rail { display: none; }
     }
 
@@ -276,11 +296,9 @@
   <div class="rail rail-right">
     <span class="ad-label">Advertisement</span>
     <ins class="adsbygoogle"
-         style="display:block"
+         style="display:inline-block;width:160px;height:600px"
          data-ad-client="ca-pub-2349356292132712"
-         data-ad-slot="9117561822"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+         data-ad-slot="9117561822"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
@@ -636,7 +654,7 @@
   <!-- ====== Ad Unit 4 &middot; 2827485645 &middot; Display, auto/full-width ====== -->
   <div class="inline-ad">
     <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-4" style="min-height:140px;">
+    <div class="ad-placeholder" id="ad-slot-4">
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-2349356292132712"
@@ -695,7 +713,7 @@
   <!-- ====== Ad Unit 5 &middot; 3833480941 &middot; In-article, fluid ====== -->
   <div class="inline-ad">
     <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-5" style="min-height:100px;">
+    <div class="ad-placeholder" id="ad-slot-5">
       <ins class="adsbygoogle"
            style="display:block; text-align:center;"
            data-ad-layout="in-article"
