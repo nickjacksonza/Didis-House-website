@@ -29,16 +29,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recording Studio Equipment & Session Guide | Didi's House</title>
-  <meta name="description" content="An in-depth, plain-English guide to recording studio equipment, mic choice, gain staging and session technique for voice over, podcasts, audiobooks and demos, from Didi's House Recording Studio in Randburg.">
+  <meta name="description" content="A plain-English guide to studio gear, choosing a mic, setting levels and session technique for voice over, podcasts, audiobooks and demos.">
   <link rel="canonical" href="https://recordingstudio.co.za/support-for-free.html">
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Didi's House Recording Studio">
+  <meta property="og:title" content="Recording Studio Equipment &amp; Session Guide">
+  <meta property="og:description" content="A plain-English guide to studio gear, choosing a mic, setting levels and session technique for voice over, podcasts, audiobooks and demos.">
+  <meta property="og:url" content="https://recordingstudio.co.za/support-for-free.html">
+  <meta property="og:image" content="https://recordingstudio.co.za/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Didi's House Recording Studio exterior, Kensington B, Randburg, Johannesburg">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
   <!-- Google Fonts + base styling reused from main site, slightly compact -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,72,420;0,72,560;0,72,640;1,72,420;1,72,560&family=Hanken+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 
   <!-- AdSense script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2349356292132712" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2349356292132712" crossorigin="anonymous"
+    onload="document.documentElement.classList.add('g-ok')" onerror="document.documentElement.classList.add('g-off')"></script>
 
   <!-- Article schema for AEO/SEO -->
   <script type="application/ld+json">
@@ -47,596 +60,608 @@
     "@type": "Article",
     "headline": "Recording Studio Equipment & Session Guide",
     "description": "An in-depth guide to recording studio equipment, mic choice, gain staging and session technique for voice over, podcasts, audiobooks and demos.",
-    "author": { "@type": "Organization", "name": "Didi's House" },
+    "author": { "@type": "Organization", "name": "Didi's House", "url": "https://recordingstudio.co.za/" },
     "publisher": {
       "@type": "Organization",
       "name": "Didi's House",
       "url": "https://recordingstudio.co.za/"
     },
     "mainEntityOfPage": "https://recordingstudio.co.za/support-for-free.html",
+    "image": "https://recordingstudio.co.za/og-image.jpg",
+    "datePublished": "2026-07-07",
+    "dateModified": "2026-11-11",
+    "inLanguage": "en-ZA",
     "about": ["recording studio equipment", "audio interfaces", "condenser microphones", "voice over recording", "podcast recording", "audiobook recording", "gain staging"]
   }
   </script>
 
   <style>
-    /* Minimal reset + reuse of Didi's House DNA */
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      background: #0d0f0c;
-      color: #f2ead9;
-      font-family: 'Hanken Grotesk', system-ui, sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-      font-size: 17px;
-      padding: 2rem 1.5rem;
+      background: #0d0f0c; color: #f2ead9;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif; font-weight: 300;
+      line-height: 1.65; font-size: 17px; padding: 0 1.5rem 2rem;
     }
-    .wrap {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .tag {
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #93b074;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .tag::before {
-      content: '';
-      display: block;
-      width: 22px;
-      height: 1px;
-      background: #93b074;
-      flex-shrink: 0;
-    }
-    h1 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-weight: 560;
-      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin: 0.5rem 0 1rem;
-    }
-    h1 em, h2 em {
-      font-style: italic;
-      font-weight: 420;
-      color: #ffc06e;
-    }
-    .subhead {
-      color: #cfc8b4;
-      max-width: 62ch;
-      font-size: 1.1rem;
-      margin-bottom: 2.5rem;
-    }
-    .back-link {
-      display: inline-block;
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #8f8b7c;
-      border: 1px solid rgba(242,234,217,0.15);
-      padding: 12px 24px;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      margin-bottom: 2.5rem;
-    }
-    .back-link:hover {
-      border-color: #93b074;
-      color: #f2ead9;
-    }
-    .back-link::before {
-      content: '\2190 ';
-    }
+    a { color: #93b074; }
+    .wrap { max-width: 800px; margin: 0 auto; }
 
-    article { margin-top: 1rem; }
+    /* site header */
+    .top { max-width: 800px; margin: 0 auto 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.4rem 0; border-bottom: 1px solid rgba(242,234,217,0.08); }
+    .logo { font-family: 'Fraunces', Georgia, serif; font-weight: 560; font-size: 1.25rem; color: #f2ead9; text-decoration: none; }
+    .logo em { font-style: italic; font-weight: 420; color: #93b074; }
+    .top nav { display: flex; gap: 1.3rem; }
+    .top nav a { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #cfc8b4; text-decoration: none; }
+    .top nav a:hover { color: #93b074; }
 
-    .section-tag {
-      margin-top: 3rem;
-      margin-bottom: 0.6rem;
-    }
-    h2 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-weight: 560;
-      font-size: clamp(1.5rem, 3.6vw, 2.1rem);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 1rem;
-    }
-    h3 {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 500;
-      font-size: 1.05rem;
-      color: #f2ead9;
-      margin: 0 0 0.4rem;
-    }
-    p {
-      color: #cfc8b4;
-      margin-bottom: 1rem;
-      max-width: 68ch;
-    }
-    .gear-list, .tips-list {
-      list-style: none;
-      display: grid;
-      gap: 1.2rem;
-      margin: 1.5rem 0 2rem;
-    }
-    .gear-list li, .tips-list li {
-      background: rgba(19,22,15,0.55);
-      border: 1px solid rgba(242,234,217,0.08);
-      border-radius: 10px;
-      padding: 1.1rem 1.3rem;
-    }
-    .gear-list li p, .tips-list li p {
-      margin-bottom: 0;
-    }
-    .gear-list .role {
-      font-family: 'Space Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #93b074;
-      display: block;
-      margin-bottom: 0.4rem;
-    }
+    .tag { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #93b074; display: flex; align-items: center; gap: 10px; }
+    .tag::before { content: ''; display: block; width: 22px; height: 1px; background: #93b074; flex-shrink: 0; }
+    h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 560; font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.05; letter-spacing: -0.02em; margin: 0.5rem 0 1rem; }
+    h1 em { font-style: italic; font-weight: 420; color: #ffc06e; }
+    .subhead { color: #cfc8b4; max-width: 62ch; font-size: 1.1rem; margin-bottom: 2rem; }
 
-    /* Ads placed within the article flow, spaced between substantial sections */
-    .inline-ad {
-      background: rgba(19,22,15,0.4);
-      border-radius: 12px;
-      padding: 1.5rem 1rem;
-      margin: 2.5rem 0;
-      border: 1px solid rgba(242,234,217,0.05);
-      text-align: center;
-    }
-    .ad-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #8f8b7c;
-      background: rgba(13,15,12,0.5);
-      padding: 4px 12px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    .ad-placeholder {
-      width: 100%;
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
+    /* contents */
+    .toc { border: 1px solid rgba(242,234,217,0.1); border-radius: 10px; padding: 1.1rem 1.3rem; margin-bottom: 1rem; }
+    .toc h2 { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #8f8b7c; font-weight: 400; margin: 0 0 0.6rem; }
+    .toc ol { padding-left: 1.3rem; color: #8f8b7c; }
+    .toc li { margin: 0.25rem 0; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
 
-    /* Skyscraper side rails: fixed in the page margins, only shown when there's
-       enough viewport width that they can never overlap the content column
-       (800px content + generous margin on each side). Hidden below 1440px. */
-    .rail {
-      position: fixed;
-      top: 130px;
-      width: 160px;
-      z-index: 2;
-    }
-    .rail-left { left: 28px; }
-    .rail-right { right: 28px; }
-    .rail .ad-label { margin-bottom: 0.6rem; }
-    @media (max-width: 1440px) {
-      .rail { display: none; }
-    }
+    section { scroll-margin-top: 1rem; }
+    .section-tag { margin-top: 3.2rem; margin-bottom: 0.6rem; }
+    h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 560; font-size: clamp(1.5rem, 3.6vw, 2.1rem); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 1rem; }
+    h3 { font-family: 'Hanken Grotesk', sans-serif; font-weight: 500; font-size: 1.08rem; color: #f2ead9; margin: 1.6rem 0 0.4rem; }
+    p, li { color: #cfc8b4; }
+    p { margin-bottom: 1rem; max-width: 68ch; }
+    strong { color: #f2ead9; font-weight: 500; }
+    ul.plain { margin: 0 0 1rem 1.2rem; }
+    ul.plain li { margin: 0.35rem 0; max-width: 64ch; }
 
-    .closing {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(242,234,217,0.06);
-    }
+    /* gear cards */
+    .gear { list-style: none; display: grid; gap: 1rem; margin: 1.5rem 0 2rem; }
+    .gear li { display: grid; grid-template-columns: 88px 1fr; gap: 1.1rem; align-items: start; background: rgba(19,22,15,0.55); border: 1px solid rgba(242,234,217,0.08); border-radius: 10px; padding: 1.1rem 1.2rem; }
+    .gear li.noimg { grid-template-columns: 1fr; }
+    .gear img { width: 88px; height: 88px; border-radius: 8px; display: block; }
+    .gear .role { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #93b074; display: block; margin-bottom: 0.3rem; }
+    .gear h3 { margin-top: 0; }
+    .gear p { margin-bottom: 0; }
+    .gear p + p { margin-top: 0.7rem; }
+    @media (max-width: 520px) { .gear li { grid-template-columns: 64px 1fr; gap: 0.9rem; } .gear img { width: 64px; height: 64px; } }
 
-    .footnote {
-      border-top: 1px solid rgba(242,234,217,0.06);
-      margin-top: 3rem;
-      padding-top: 2rem;
-      color: #8f8b7c;
-      font-size: 0.9rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .footnote a {
-      color: #93b074;
-      text-decoration: none;
-      border-bottom: 1px dotted transparent;
-      transition: border-color 0.2s;
-    }
-    .footnote a:hover {
-      border-color: #93b074;
-    }
-    /* responsive */
+    /* two-column choice */
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0 1.5rem; }
+    .pair > div { border-left: 2px solid #93b074; padding: 0.2rem 0 0.2rem 1rem; }
+    .pair h3 { margin-top: 0; }
+    .pair p { margin-bottom: 0; }
+    @media (max-width: 600px) { .pair { grid-template-columns: 1fr; } }
+
+    /* tables */
+    .table-wrap { overflow-x: auto; margin: 1.2rem 0 1.8rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #93b074; font-weight: 400; text-align: left; padding: 0 0.8rem 0.6rem 0; border-bottom: 1px solid rgba(242,234,217,0.15); }
+    td { color: #cfc8b4; vertical-align: top; padding: 0.75rem 0.8rem 0.75rem 0; border-bottom: 1px solid rgba(242,234,217,0.07); }
+    td:first-child { color: #f2ead9; font-weight: 400; }
     @media (max-width: 600px) {
-      body { padding: 1rem; }
+      table.stack thead { display: none; }
+      table.stack tr { display: block; padding: 0.8rem 0; border-bottom: 1px solid rgba(242,234,217,0.1); }
+      table.stack td { display: block; border: 0; padding: 0.1rem 0; }
+      table.stack td[data-h]::before { content: attr(data-h) ": "; color: #93b074; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; }
     }
+
+    /* glossary */
+    dl.terms { display: grid; grid-template-columns: 11rem 1fr; gap: 0.6rem 1.4rem; margin: 1.2rem 0 2rem; }
+    dl.terms dt { color: #f2ead9; font-weight: 500; }
+    dl.terms dd { color: #cfc8b4; max-width: 60ch; }
+    @media (max-width: 600px) { dl.terms { grid-template-columns: 1fr; gap: 0.1rem; } dl.terms dd { margin-bottom: 0.8rem; } }
+
+    /* checklist */
+    ul.check { list-style: none; margin: 1.2rem 0 1.5rem; }
+    ul.check li { position: relative; padding: 0.55rem 0 0.55rem 2rem; border-bottom: 1px solid rgba(242,234,217,0.07); max-width: 66ch; }
+    ul.check li::before { content: ''; position: absolute; left: 0.1rem; top: 0.85rem; width: 0.95rem; height: 0.95rem; border: 1.5px solid #93b074; border-radius: 3px; }
+
+    /* booking notes */
+    .note { border: 1px solid rgba(147,176,116,0.35); background: rgba(147,176,116,0.06); border-radius: 10px; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .note p { margin: 0; }
+    .book { margin-top: 3rem; border: 1px solid rgba(147,176,116,0.35); background: rgba(147,176,116,0.07); border-radius: 12px; padding: 1.6rem 1.5rem; }
+    .book h2 { margin-bottom: 0.6rem; }
+    .btns { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.2rem; }
+    .btn { display: inline-block; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding: 13px 24px; border-radius: 30px; }
+    .btn-fill { background: #93b074; color: #1d130a; }
+    .btn-line { border: 1px solid rgba(242,234,217,0.25); color: #f2ead9; }
+
+    /* advertising boxes (neutral class names, so blockers that hide "ad" classes leave the note visible) */
+    .brk { background: rgba(19,22,15,0.4); border-radius: 12px; padding: 1.5rem 1rem; margin: 2.5rem 0; border: 1px solid rgba(242,234,217,0.05); text-align: center; }
+    .brk-label { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #8f8b7c; background: rgba(13,15,12,0.5); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem; }
+    .brk-in { width: 100%; min-height: 90px; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+    .brk-note { display: none; font-size: 12px; color: #8f8b7c; margin: 0.4rem auto 0; max-width: none; }
+    .side { position: fixed; top: 130px; width: 160px; z-index: 2; text-align: center; }
+    .side-left { left: 28px; }
+    .side-right { right: 28px; }
+    /* Reserve full height only once AdSense has loaded, so text doesn't jump when an ad arrives */
+    html.g-ok .brk-in { min-height: 280px; }
+    /* AdSense blocked: collapse the box and show a short note instead */
+    html.g-off .brk-in, html.g-off ins.adsbygoogle { display: none !important; }
+    html.g-off .brk { padding: 0.8rem 1rem; margin: 2rem 0; }
+    html.g-off .brk-note { display: block; }
+    /* Google had no ad to show: hide the whole box */
+    .brk:has(ins.adsbygoogle[data-ad-status="unfilled"]),
+    .side:has(ins.adsbygoogle[data-ad-status="unfilled"]) { display: none; }
+    @media (max-width: 1440px), (max-height: 800px) { .side { display: none; } }
+
+    .footnote { border-top: 1px solid rgba(242,234,217,0.06); margin-top: 3rem; padding-top: 1.6rem; color: #8f8b7c; font-size: 0.9rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+    .footnote p { color: #8f8b7c; margin: 0; }
+    .footnote a { text-decoration: none; }
+    @media (max-width: 600px) { body { padding: 0 1rem 1.5rem; } .top nav { gap: 0.9rem; } }
   </style>
 </head>
 <body>
 
-  <!-- ====== SKYSCRAPER RAILS (unit 6 & unit 7, wide viewports only) ====== -->
-  <div class="rail rail-left">
-    <span class="ad-label">Advertisement</span>
+  <aside class="side side-left" aria-label="Advertisement">
+    <span class="brk-label">Advertisement</span>
     <ins class="adsbygoogle"
          style="display:inline-block;width:160px;height:600px"
          data-ad-client="ca-pub-2349356292132712"
          data-ad-slot="9824174228"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-  <div class="rail rail-right">
-    <span class="ad-label">Advertisement</span>
+    <p class="brk-note"></p>
+  </aside>
+  <aside class="side side-right" aria-label="Advertisement">
+    <span class="brk-label">Advertisement</span>
     <ins class="adsbygoogle"
-         style="display:block"
+         style="display:inline-block;width:160px;height:600px"
          data-ad-client="ca-pub-2349356292132712"
-         data-ad-slot="9117561822"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+         data-ad-slot="9117561822"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
+    <p class="brk-note"></p>
+  </aside>
 
-<div class="wrap">
+<header class="top">
+  <a class="logo" href="/">Didi&rsquo;s <em>House</em></a>
+  <nav aria-label="Main">
+    <a href="/">Studio</a>
+    <a href="/#rates">Rates</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>
 
-  <!-- breadcrumb / back to studio -->
-  <a href="/contact.html" class="back-link">Back to contact page</a>
+<main class="wrap">
 
   <div class="tag">Studio notes</div>
-  <h1>What's actually in a small treated <em>booth.</em></h1>
+  <h1>Recording studio equipment and session <em>guide.</em></h1>
   <p class="subhead">
-    A long-form, plain-English guide to the gear behind a compact voice, podcast and vocal booth,
-    how to choose a mic, how to set clean levels, and the habits that make the biggest difference
-    to a good take &mdash; whether you're recording here in Kensington B or setting up a corner of
-    your own home.
+    Answers to the questions people ask before and during a recording session, with notes on the
+    gear in the Didi&rsquo;s House booth. Use it to prepare for a session here, or to get better
+    results at home.
   </p>
+
+  <nav class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#gear">What gear do you need to record a voice?</a></li>
+      <li><a href="#mics">Condenser or dynamic: which mic should you use?</a></li>
+      <li><a href="#settings">Which settings and file formats should you use?</a></li>
+      <li><a href="#before">How should you prepare for a session?</a></li>
+      <li><a href="#habits">How do you get a clean take?</a></li>
+      <li><a href="#sessions">What changes for each type of recording?</a></li>
+      <li><a href="#delivery">What should you check before you send your files?</a></li>
+      <li><a href="#problems">Why does my recording sound wrong?</a></li>
+      <li><a href="#terms">Recording terms</a></li>
+    </ol>
+  </nav>
 
   <article>
 
-  <div class="tag section-tag">The signal chain</div>
-  <h2>Five or six pieces of gear, one job: clean signal in.</h2>
+  <section id="gear">
+  <div class="tag section-tag">The gear</div>
+  <h2>What gear do you need to record a voice?</h2>
   <p>
-    None of this works without the room doing its job first. A treated space, even a small one,
-    absorbs the early reflections that would otherwise smear a recording with a faint, boxy echo.
-    That's why the booth itself, not just what's plugged into it, is the first piece of equipment
-    worth thinking about. From there, a small booth doesn't need much: a microphone suited to what
-    you're recording, a way to get that signal into a laptop without adding noise, and a way to hear
-    it back without the mic hearing it too. Here's what each piece in a typical booth setup actually
-    does.
+    Less than you might think, and the most important part isn&rsquo;t gear at all. A mic records
+    everything that reaches it, including your voice bouncing off walls, floors and windows. Those
+    reflections arrive a few milliseconds after the direct sound and make a voice sound hollow and
+    far away. Editing software can&rsquo;t fully remove them, so the room comes first. A modest mic
+    in a treated booth will beat an expensive one in a kitchen.
   </p>
+  <p>After the room, you need a mic, an interface, headphones and something to record on. This is what&rsquo;s in the studio, and why each piece is there.</p>
 
-  <ul class="gear-list">
+  <ul class="gear">
     <li>
-      <span class="role">01 &middot; Input, condenser</span>
-      <h3>Large-diaphragm condenser microphone</h3>
-      <p>
-        The workhorse for voice over, vocals and demos. Condenser mics are more sensitive than dynamic
-        mics, which means they pick up detail and warmth well &mdash; but also more of the room around
-        them. They need a treated space and a pop filter to sound their best, and they usually need
-        phantom power (48V) supplied by an interface or mixer to work at all.
-      </p>
+      <img src="thumb-akg-p220.webp" alt="AKG P220 condenser microphone in its shock mount" width="88" height="88" loading="lazy">
+      <div>
+        <span class="role">Main mic</span>
+        <h3>AKG P220 large-diaphragm condenser</h3>
+        <p>
+          Most voice over, audiobooks and vocals in the booth go through the P220. As a condenser, it
+          picks up the small things that make a voice sound close, like breath and the tail of a quiet
+          word. That sensitivity also means it hears the room, which is why it lives in a treated booth.
+        </p>
+        <p>
+          The mic itself adds very little hiss: its self-noise is 16 dB(A). On a quiet take, you will hear the room long before you hear the mic. It can take 135 dB of sound pressure before it
+          distorts, which covers almost any singer. For the ones who really let go, a &minus;20 dB pad raises that to 155 dB. A bass-cut switch tidies up a voice that gets boomy up close. AKG,
+          founded in Vienna in 1947, designed it for home and project studios. It needs 48-volt phantom
+          power, which the interface supplies.
+        </p>
+      </div>
     </li>
     <li>
-      <span class="role">02 &middot; Input, dynamic</span>
-      <h3>Dynamic microphone</h3>
-      <p>
-        Less sensitive than a condenser, which makes it more forgiving in an untreated room and less
-        prone to picking up plosives and handling noise. A common choice for podcasting, live vocals,
-        and any session where the room itself isn't fully controlled.
-      </p>
+      <img src="thumb-shure-sm58.webp" alt="Shure SM58 dynamic microphone" width="88" height="88" loading="lazy">
+      <div>
+        <span class="role">Second mic</span>
+        <h3>Shure SM58 dynamic</h3>
+        <p>
+          If you have ever sung into a mic at a gig, it was probably one of these. Shure has made the SM58 since 1966 and says it has shipped well over a million. You will find it on stages and in rehearsal rooms all over the world.
+          Shure counts Paul McCartney, Patti Smith, Tina Turner, Alice Cooper, Buddy Guy, Cheap Trick and
+          Run DMC among its users. Frank Sinatra reportedly asked for his by name. It copes well with a loud voice. In the booth, it is the mic for a second podcast guest, or for a singer who is too loud for the condenser. It hears less of the room, has a pop filter built into its round
+          grille, and needs no phantom power.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">Second condenser</span>
+        <h3>Audio-Technica AT2020</h3>
+        <p>
+          Billie Eilish&rsquo;s vocals on &ldquo;Ocean Eyes&rdquo; were recorded on one of these, in her
+          brother Finneas&rsquo;s bedroom, in 2015. Finneas later moved her to a Neumann TLM 103, and he has
+          called the AT2020 a great first mic for what it costs. Its 16 mm diaphragm is smaller than the P220&rsquo;s, and the two mics sound noticeably different on the same voice. It also hisses a little more (20 dB(A)
+          self-noise against the P220&rsquo;s 16), which you are unlikely to notice on a normal voice. Having two condensers means two people can both record on one. You can also try the same line on each and keep whichever suits your voice. Like the P220, it needs phantom power.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">Spare dynamics</span>
+        <h3>Two Shure SV200s</h3>
+        <p>
+          These are simple, sturdy dynamic vocal mics from Shure&rsquo;s budget range. Like the SM58, they pick up
+          mostly what is right in front of them and need no phantom power. They also have an on/off switch,
+          which is handy when someone wants to cough or chat between takes. Use one when a guest prefers a dynamic mic, or give a second singer their own mic to warm up on.
+        </p>
+      </div>
     </li>
     <li>
-      <span class="role">03 &middot; Convert</span>
-      <h3>Audio interface</h3>
-      <p>
-        Converts the analogue signal from a microphone into digital audio a laptop can record, and
-        supplies phantom power to condenser mics along the way. The quality of the preamp inside the
-        interface has a real, audible effect on the finished recording &mdash; a clean preamp with low
-        self-noise is the difference between a take that sounds professional and one that sounds like
-        it was recorded on a laptop mic.
-      </p>
+      <img src="thumb-audient-id14.webp" alt="Audient iD14 audio interface" width="88" height="88" loading="lazy">
+      <div>
+        <span class="role">Interface</span>
+        <h3>Audient iD14</h3>
+        <p>
+          This is the box that joins the mics to your laptop over USB. It powers the condenser, lifts the
+          mic&rsquo;s tiny signal to a level your software can use, and turns it into digital audio.
+        </p>
+        <p>
+          Its preamps share their circuit design with Audient&rsquo;s ASP8024, a large mixing console found in
+          professional studios. It records at up to 96 kHz, 24-bit, which is twice the sample rate most voice clients ask for. Resolution will never be the reason a file comes back. Two mic inputs mean
+          two people can each have their own track, and you can listen to yourself through it with no
+          delay. That matters more than it sounds: hearing your own voice even a tenth of a second late
+          makes it surprisingly hard to talk normally.
+        </p>
+      </div>
     </li>
     <li>
-      <span class="role">04 &middot; Monitor</span>
-      <h3>Closed-back headphones</h3>
-      <p>
-        Closed-back headphones seal around the ear so almost none of the sound leaks back out into the
-        room, which matters because any leakage gets picked up by the microphone as bleed. They're
-        used for tracking (recording) rather than mixing, where open-back headphones are usually
-        preferred for a more natural, less fatiguing sound.
-      </p>
+      <img src="thumb-ath-m20x.webp" alt="Audio-Technica ATH-M20X closed-back headphones" width="88" height="88" loading="lazy">
+      <div>
+        <span class="role">Headphones</span>
+        <h3>Audio-Technica ATH-M20X</h3>
+        <p>
+          Closed-back headphones keep the sound in your ears and away from the mic. Open-backs leak, and a
+          sensitive condenser will happily record that leak as a faint ghost of your backing track. The
+          M20X is the entry model in Audio-Technica&rsquo;s M-series, the same range as the M50x you have
+          probably seen around plenty of studio necks. Reviewers describe its sound as neutral for a closed-back. That is what you want while recording, because you hear your voice as it is, without extra bass flattering it. It is also light, which you will appreciate two hours into an
+          audiobook.
+        </p>
+      </div>
     </li>
     <li>
-      <span class="role">05 &middot; Optional</span>
-      <h3>MIDI keyboard/controller</h3>
-      <p>
-        Not needed for voice work, but useful for producers and songwriters sketching toplines,
-        chords or a scratch beat inside their DAW during a demo session.
-      </p>
+      <img src="thumb-akai-mpk-mini.webp" alt="Akai MPK Mini MK3 MIDI keyboard" width="88" height="88" loading="lazy">
+      <div>
+        <span class="role">Keys</span>
+        <h3>Akai MPK Mini MK3</h3>
+        <p>
+          You won&rsquo;t need it for voice work. It&rsquo;s there for songwriters and producers who want
+          to sketch a melody or a beat between takes. Akai calls the MPK Mini the best-selling USB MIDI keyboard in the world. The appeal is easy to see: 25 small keys, eight drum pads and eight knobs in something smaller than a laptop. This is the 2020 MK3 version, and it plugs into most
+          recording software without any drivers.
+        </p>
+      </div>
     </li>
-    <li>
-      <span class="role">06 &middot; Also in the room</span>
-      <h3>Stands, cables, pop filter & shock mount</h3>
-      <p>
-        A pop filter sits between mouth and mic to break up the blast of air from hard "P" and "B"
-        sounds before it hits the capsule. A shock mount cradles the mic in elastic bands so footsteps,
-        desk knocks and handling noise don't travel up the stand and into the recording. Neither is
-        glamorous, and both matter more than most of the gear around them.
-      </p>
+    <li class="noimg">
+      <div>
+        <span class="role">In the booth</span>
+        <h3>Yamaha PSR-E383 keyboard</h3>
+        <p>
+          A Yamaha PSR-E383 sits on a stand inside the booth. Its 61 full-size keys are touch-sensitive, so a note gets louder the harder you play it, as on a piano. They aren&rsquo;t weighted, though, so they feel lighter than piano keys. Singers can use it to find a starting note or play along while they warm up. It helps with harmonies too: play the part a few times, then sing it.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">On the producer desk</span>
+        <h3>Blue Yeti USB mic</h3>
+        <p>
+          The Yeti plugs straight into a computer by USB, with no interface needed. That makes it the quickest way to catch an idea before it disappears. Billie Eilish and Finneas used one while
+          demoing songs. It has three capsules and four pickup patterns, including one for two people facing
+          each other across a table. It records at 48 kHz, 16-bit. That is fine for demos, scratch vocals
+          and notes to yourself. For a final take, use the P220 or AT2020 through the iD14, which records
+          at 24-bit.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">The small things</span>
+        <h3>Pop filter, shock mount and stands</h3>
+        <p>
+          The pop filter is a fine mesh between your mouth and the mic. It breaks up the burst of air from
+          P and B sounds, which would otherwise hit the mic as a thump. The shock mount holds the mic in
+          elastic, so a tapped desk or a shuffle of feet doesn&rsquo;t travel up the stand.
+        </p>
+      </div>
+    </li>
+    <li class="noimg">
+      <div>
+        <span class="role">What you bring</span>
+        <h3>Your laptop and recording software</h3>
+        <p>
+          Bring a laptop with the recording software (DAW) you like: Reaper, Logic, Audacity, Pro Tools
+          and Adobe Audition all work with the iD14. If you&rsquo;d rather not run the software yourself,
+          say so when you book and I&rsquo;ll set up a simple recording for you.
+        </p>
+      </div>
     </li>
   </ul>
 
-  <!-- ====== Ad Unit 1 &middot; 4437904610 &middot; Display 300x250 ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-1">
+  <p>
+    There are more mics than inputs. The iD14 records two mics at a time, so pick the pair that suits the session. For example, use the P220 and AT2020 for two narrators, or the P220 and an SM58 for a podcast host and a guest.
+  </p>
+
+  <h3>How does the booth compare with what clients ask for?</h3>
+  <p>
+    Most clients and platforms send a spec sheet, and the gear here covers the technical side of the
+    common ones. Video and voice-over clients usually want 48 kHz, 24-bit files, and the iD14 can
+    record at twice that sample rate. Audible&rsquo;s list is longer: 44.1 kHz MP3s with background
+    noise below &minus;60 dB, among other things. The P220 is quiet enough that it won&rsquo;t be what fails that noise test. Passing comes down to the room and how you set your levels. Loud singers are covered by
+    the P220&rsquo;s headroom, and the closed-back M20X keeps your headphone mix out of the recording.
+  </p>
+  <p>The gear gets you a clean file. Technique is what makes it a good one, and that&rsquo;s what the rest of this page is about.</p>
+  </section>
+
+  <aside class="brk" aria-label="Advertisement">
+    <span class="brk-label">Advertisement</span>
+    <div class="brk-in">
       <ins class="adsbygoogle"
            style="display:inline-block;width:300px;height:250px"
            data-ad-client="ca-pub-2349356292132712"
            data-ad-slot="4437904610"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
+    <p class="brk-note"></p>
+  </aside>
+
+  <section id="mics">
+  <div class="tag section-tag">Choosing a mic</div>
+  <h2>Condenser or dynamic: which mic should you use?</h2>
+  <p>
+    The right choice depends on the room and the voice, and price has little to do with it. A condenser&rsquo;s light diaphragm reacts to
+    the faintest sound. In a quiet, treated room that gives you detail and warmth. In an ordinary
+    room it also gives you the fridge, the traffic and the echo. A dynamic mic needs more sound to
+    move its heavier coil, so quiet background noise mostly doesn&rsquo;t register. You lose some
+    detail, and you need to stay closer to the mic.
+  </p>
+  <div class="pair">
+    <div>
+      <h3>Use the condenser for</h3>
+      <p>Narration, audiobooks, voice over and solo vocals: anything heard up close, often on headphones.</p>
+    </div>
+    <div>
+      <h3>Use the dynamic for</h3>
+      <p>Untreated rooms, very loud singers, and podcasts with two people, where each mic should hear only its own speaker.</p>
+    </div>
   </div>
+  <h3>Why do I sound different when I move closer?</h3>
+  <p>
+    Most mics add bass as you get closer. This is called the proximity effect. About a hand&rsquo;s
+    width away gives a full, warm voice. A few centimetres nearer or further changes the tone enough to hear. That is why voice actors keep the same distance, and why editors notice when you don&rsquo;t.
+  </p>
+  </section>
 
-  <div class="tag section-tag">Picking your mic</div>
-  <h2>Condenser or dynamic: which one for which job?</h2>
+  <section id="settings">
+  <div class="tag section-tag">Settings and formats</div>
+  <h2>Which settings and file formats should you use?</h2>
+  <h3>Sample rate and bit depth</h3>
   <p>
-    The two mic types aren't better or worse than each other, they're suited to different rooms and
-    different jobs. A condenser has a light diaphragm that responds to fine detail, which is exactly
-    why it flatters a well-treated room and exposes a noisy one. It also tends to have a published
-    self-noise spec (the hiss the mic itself adds before anything else is even amplified), and a lower
-    number there is genuinely better. A dynamic mic uses a heavier moving coil that needs more sound
-    pressure to respond, so it naturally rejects more of the room and more off-axis noise, at the cost
-    of some of that fine detail.
+    Unless your client asks for something else, record at <strong>48 kHz, 24-bit</strong>. 48 kHz is
+    the standard for video, and most voice clients accept it. 24-bit matters for a different reason. It lets you set your levels well below the top of the meter without adding hiss, which leaves room for a sudden laugh or a raised voice. It can&rsquo;t rescue a take that clips. Once a peak
+    hits the top of the meter, the distortion is in the file.
   </p>
-  <ul class="tips-list">
-    <li>
-      <h3>Reach for a condenser when</h3>
-      <p>
-        You're in a treated room, recording something that benefits from nuance &mdash; narration,
-        solo vocals, ADR, anything where the listener is close and attentive.
-      </p>
-    </li>
-    <li>
-      <h3>Reach for a dynamic when</h3>
-      <p>
-        The room isn't fully controlled, you're recording live or on the move, or you want one less
-        variable to manage between takes and between speakers.
-      </p>
-    </li>
-  </ul>
-  <p>
-    Worth knowing either way: most directional mics exhibit some degree of proximity effect, a bass
-    boost that increases the closer you get to the capsule. It's part of why voice over artists can
-    sound so warm and present right up on the mic, and part of why moving even a few centimetres
-    between sentences can change the tone of a recording enough to notice on playback.
-  </p>
+  <h3>What do clients and platforms ask for?</h3>
+  <p>These are the usual requirements. A client&rsquo;s own spec sheet always wins.</p>
+  <div class="table-wrap">
+    <table class="stack">
+      <thead><tr><th>Job</th><th>Usual delivery</th></tr></thead>
+      <tbody>
+        <tr><td>Voice over, e-learning, video</td><td data-h="Delivery">WAV, 48 kHz, 24-bit. Usually one file per script or per line, named the way the client asks.</td></tr>
+        <tr><td>Audiobooks for Audible (ACX)</td><td data-h="Delivery">MP3 at 192 kbps or higher, constant bit rate, 44.1 kHz. Loudness between &minus;23 and &minus;18 dB RMS, peaks no higher than &minus;3 dB, background noise below &minus;60 dB. Half a second to one second of room tone at the start of each file, and one to five seconds at the end.</td></tr>
+        <tr><td>Podcasts</td><td data-h="Delivery">MP3 or AAC at about &minus;16 LUFS loudness, with peaks below &minus;1 dB. Record at 48 kHz, 24-bit and convert at the end.</td></tr>
+        <tr><td>Music demos</td><td data-h="Delivery">WAV at 24-bit, at the sample rate the producer works in (usually 44.1 or 48 kHz).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </section>
 
-  <div class="tag section-tag">The interface</div>
-  <h2>What's actually happening between the mic and your laptop.</h2>
-  <p>
-    An audio interface does three unglamorous jobs at once. It supplies phantom power (a steady 48
-    volts) to condenser mics that need it. It amplifies the tiny electrical signal from the mic up to
-    a usable level through its preamp, which is the single component with the biggest effect on how
-    clean or coloured a recording sounds. And it converts that amplified analogue signal into digital
-    audio your laptop can actually store and edit.
-  </p>
-  <p>
-    That digital conversion happens at a sample rate (how many times per second the signal is
-    measured, commonly 44.1kHz or 48kHz) and a bit depth (how much detail each measurement captures,
-    commonly 16-bit or 24-bit). For voice work, podcasts and anything destined for video, 48kHz at
-    24-bit is the sensible default: it matches video frame rates and leaves enough headroom that a
-    slightly hot take doesn't have to be a ruined one. Latency, the small delay between making a sound
-    and hearing it back through the interface, is worth checking too &mdash; most interfaces offer
-    direct, zero-latency monitoring so you hear yourself in real time rather than a fraction of a
-    second late, which is disorienting fast.
-  </p>
-
-  <!-- ====== Ad Unit 2 &middot; 6164095427 &middot; Display 300x250 ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-2">
+  <aside class="brk" aria-label="Advertisement">
+    <span class="brk-label">Advertisement</span>
+    <div class="brk-in">
       <ins class="adsbygoogle"
            style="display:inline-block;width:300px;height:250px"
            data-ad-client="ca-pub-2349356292132712"
            data-ad-slot="6164095427"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-  </div>
+    <p class="brk-note"></p>
+  </aside>
 
-  <div class="tag section-tag">Before you hit record</div>
-  <h2>Getting a clean take, wherever you're recording.</h2>
+  <section id="before">
+  <div class="tag section-tag">Before your session</div>
+  <h2>How should you prepare for a session?</h2>
+  <p>Ten minutes of preparation the day before saves a lot of studio time.</p>
+  <h3>Get the spec from your client first</h3>
   <p>
-    Good gear helps, but most of what separates a clean take from a muddy one comes down to a few
-    habits that cost nothing.
+    Ask for the file format, sample rate, file names and any loudness target before you book. Knowing them on the day lets you set up the project correctly from the start. You won&rsquo;t need to convert or rename files afterwards. The <a href="#settings">table above</a> lists what most
+    clients and platforms expect.
   </p>
+  <h3>Set up your laptop at home</h3>
+  <p>
+    Charge your laptop, bring the charger and install any updates the night before. An update that
+    starts mid-session can eat half an hour. Create an empty project at the right sample rate, and
+    check you have a free USB port for the interface, or bring an adapter.
+  </p>
+  <h3>Prepare the script</h3>
+  <p>
+    Read it aloud at least once. Mark the words you trip over and check how to pronounce names,
+    places and brand names with the client. Bring the script on a tablet with its sound off, or
+    printed on loose single-sided pages: stapled pages rustle when you turn them.
+  </p>
+  <h3>Look after your voice</h3>
+  <p>
+    Water you drink doesn&rsquo;t touch your vocal folds. It reaches them through your body over several hours, so drink plenty the day before. On the day, keep a bottle nearby and sip between takes to stop your mouth drying out and clicking.
+  </p>
+  <h3>Wear quiet clothes</h3>
+  <p>
+    A sensitive mic picks up rustling jackets, jingling bracelets and squeaky shoes. Soft cotton and
+    bare wrists are the safest choice.
+  </p>
+  <h3>Plan where your files go</h3>
+  <p>
+    Your recordings are saved on your own laptop. Bring a USB stick or have a cloud folder ready, so
+    you can copy the session to a second place before you leave.
+  </p>
+  <div class="note"><p><strong>First time in a booth?</strong> Say so when you book. Setup help and a basic edit are part of the hour. There&rsquo;s parking on the property, and coffee and tea are on hand.</p></div>
+  </section>
 
-  <ul class="tips-list">
-    <li>
-      <h3>Treat the room before you treat the mic</h3>
-      <p>
-        Bare walls and hard floors cause reflections that a microphone will happily record. Soft
-        furnishings, curtains, rugs and even a duvet hung on a wardrobe door absorb enough reflected
-        sound to noticeably tighten up a home recording. A closet full of clothes is, acoustically,
-        a surprisingly good vocal booth.
-      </p>
-    </li>
-    <li>
-      <h3>Watch your gain staging</h3>
-      <p>
-        Set the interface's input gain so the loudest peaks sit comfortably below clipping &mdash;
-        roughly -12dB to -6dB on the meter is a safe working range. Too hot and the recording distorts
-        permanently; too quiet and you'll add hiss by boosting it later.
-      </p>
-    </li>
-    <li>
-      <h3>Mic distance and angle</h3>
-      <p>
-        Working slightly off-axis (angled rather than speaking directly into the capsule) reduces
-        plosives on hard "P" and "B" sounds. A pop filter roughly a hand's width from the mic does
-        the rest.
-      </p>
-    </li>
-    <li>
-      <h3>Monitor while you track, not just after</h3>
-      <p>
-        Wearing closed-back headphones during recording, not just during playback, catches problems
-        while they're still fixable: mouth noise, script rustle, a chair creak, timing against a
-        click track.
-      </p>
-    </li>
-    <li>
-      <h3>Grab ten seconds of room tone</h3>
-      <p>
-        Before or after every session, record ten seconds of pure silence in the room. It sounds
-        pointless until an editor needs a noise profile to clean up a rough section, or a few seconds
-        of natural quiet to bridge two edits without an audible jump.
-      </p>
-    </li>
-    <li>
-      <h3>Keep your position consistent</h3>
-      <p>
-        If a project spans more than one sitting, note your distance from the mic and your interface's
-        gain setting. Matching them on the next session avoids an audible level or tone jump between
-        recordings that were meant to sit side by side.
-      </p>
-    </li>
+  <section id="habits">
+  <div class="tag section-tag">Before and during the take</div>
+  <h2>How do you get a clean take?</h2>
+  <p>Most problems that take an hour to fix in the edit take a minute to prevent in the booth.</p>
+  <h3>Set your levels with your loudest line</h3>
+  <p>
+    Read the loudest part of the script and adjust the input gain until it peaks between about
+    &minus;12 dB and &minus;6 dB. Setting levels on a quiet line is the usual mistake: the first
+    laugh or shout then distorts. Setting them too low causes the opposite problem, because raising
+    a quiet recording later raises its hiss too.
+  </p>
+  <h3>Keep the same distance</h3>
+  <p>
+    Your level and tone change as you move. Find a comfortable spot about a hand&rsquo;s width from
+    the pop filter and stay there. If a project runs over several sessions, note the distance and the
+    gain setting so the next session sounds the same.
+  </p>
+  <h3>Speak slightly across the mic</h3>
+  <p>
+    Angle the mic a little, or speak just past it. The burst of air from P and B sounds then sails past the mic. Together with the pop filter, this stops most thumps.
+  </p>
+  <h3>Listen on headphones while you record</h3>
+  <p>
+    You&rsquo;ll hear a rustled page, a creaking chair or a stomach rumble while you can still redo
+    the line.
+  </p>
+  <h3>Record ten seconds of room tone</h3>
+  <p>
+    At the start or end of the session, record the room with nobody speaking. Every room has its own faint sound, and that is what you are capturing. Editors use it to fill gaps between edits so they don&rsquo;t
+    drop into dead silence, and noise-reduction tools use it to learn what to remove.
+  </p>
+  </section>
+
+  <section id="sessions">
+  <div class="tag section-tag">By type of session</div>
+  <h2>What changes for each type of recording?</h2>
+  <h3>Voice over</h3>
+  <p>
+    Stand if you can. Your lungs have more room, so long lines are easier to hold. Read the whole script
+    aloud once before you record, to find the tricky words and decide where the emphasis goes.
+  </p>
+  <h3>Podcasts</h3>
+  <p>
+    Give each person their own mic and their own track, so you can fix one voice without affecting
+    the other. The booth&rsquo;s two inputs allow this. Match the levels before you start, and agree
+    on a signal for &ldquo;let&rsquo;s redo that&rdquo; so nobody talks over a fluffed line.
+  </p>
+  <h3>Audiobooks</h3>
+  <p>
+    Narration is a long-distance event. When you stumble, pause and pick up from the start of the sentence. There&rsquo;s no need to redo the whole page. Keep your distance and tone the same across chapters
+    recorded days apart, and take a short break every hour. Half-day and full-day blocks are easy to
+    arrange, and <a href="/#rates">audiobooks in a South African language are half price</a>.
+  </p>
+  <h3>Vocals and demos</h3>
+  <p>
+    Record a rough guide vocal early, so a producer has something to build on. Don&rsquo;t chase one
+    perfect take: combining the best lines from three good ones is normal. If you sing loudly, try
+    the P220&rsquo;s pad or the SM58.
+  </p>
+  <h3>Self tapes and auditions</h3>
+  <p>
+    Say your name, the role and the take number at the start of each file, so nothing gets mixed up
+    later. Keep the sound clean and simple. Casting directors are listening for the performance, and heavy processing won&rsquo;t change their minds.
+  </p>
+  <h3>Narration for video</h3>
+  <p>
+    Record your voice on its own, without music. A clean voice track is far easier to mix under
+    music or move to fit the picture later.
+  </p>
+  </section>
+
+  <section id="delivery">
+  <div class="tag section-tag">After the session</div>
+  <h2>What should you check before you send your files?</h2>
+  <p>
+    Clients reject files for small, avoidable reasons more often than for the performance. Run
+    through this list before you send anything.
+  </p>
+  <ul class="check">
+    <li>Listen to the whole recording once on headphones at a normal volume, and mark any clicks, bumps or background noises to fix.</li>
+    <li>Remove distracting noises such as loud breaths, mouth clicks and page turns. Leave quiet natural breaths in: a voice without them sounds odd.</li>
+    <li>Trim the start and end of each file, leaving any room tone the client asks for. For Audible, that is half a second to one second at the start and one to five seconds at the end.</li>
+    <li>Check the levels. Peaks should stay below the client&rsquo;s limit: &minus;3 dB for Audible, about &minus;1 dB for podcasts. Match the loudness target if there is one.</li>
+    <li>Export in the format asked for: file type, sample rate and bit depth. See the <a href="#settings">delivery table</a>.</li>
+    <li>Name the files exactly as asked. Number them with leading zeros, such as 01, 02 and 03, so they sort in the right order.</li>
+    <li>Play back the exported files themselves, start to finish. Exports sometimes cut off the last word or come out at the wrong sample rate.</li>
+    <li>Send a short note with the files, listing what is included and any lines you recorded in more than one way.</li>
+    <li>Keep the project and raw recordings until the client signs off, in case they ask for changes or pickups.</li>
   </ul>
+  </section>
 
-  <div class="tag section-tag">By session type</div>
-  <h2>What changes depending on what you're recording.</h2>
-  <ul class="tips-list">
-    <li>
-      <h3>Voice over</h3>
-      <p>
-        Stand rather than sit; it opens the chest and steadies breath support over a long script. Warm
-        up for five minutes before rolling, keep water at room temperature (cold water tightens the
-        throat), and read the whole script once before recording so unfamiliar words don't trip a
-        take halfway through.
-      </p>
-    </li>
-    <li>
-      <h3>Podcasts, solo or two-person</h3>
-      <p>
-        Match input levels between mics before recording starts, not afterwards in the edit. With two
-        people on separate mics, keep enough distance between them that one person's voice doesn't
-        bleed loudly into the other's channel, and agree on a simple signal for "let's redo that"
-        rather than talking over a flubbed line.
-      </p>
-    </li>
-    <li>
-      <h3>Audiobooks</h3>
-      <p>
-        This is a pacing exercise more than a performance one. Mark pickup points as you go rather
-        than trying to nail long passages in a single unbroken take, keep a consistent narrating
-        distance and tone across chapters recorded days apart, and budget more time than feels
-        necessary &mdash; long-form narration is tiring in a way short reads aren't.
-      </p>
-    </li>
-    <li>
-      <h3>Vocals & demos</h3>
-      <p>
-        Track a guide vocal early even if it's rough; it gives a producer or collaborator something to
-        build around. Comping several takes of the same line is normal and expected, so don't chase
-        a single perfect pass when three good ones spliced together will do the job.
-      </p>
-    </li>
-    <li>
-      <h3>Self tapes & auditions</h3>
-      <p>
-        Slate clearly (name, role, take number) at the start of each file so nothing gets mixed up
-        later, and prioritise a clean, consistent read over a heavily produced one &mdash; casting
-        directors are listening for the performance, not the polish.
-      </p>
-    </li>
-    <li>
-      <h3>Content creator narration</h3>
-      <p>
-        Record narration separately from any background music or on-camera audio where possible.
-        Clean, dry narration is far easier to mix, duck under music, or re-time to picture later than
-        anything captured with music already baked in.
-      </p>
-    </li>
-  </ul>
-
-  <!-- ====== Ad Unit 3 &middot; 5106164625 &middot; Display 300x250 ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-3">
+  <aside class="brk" aria-label="Advertisement">
+    <span class="brk-label">Advertisement</span>
+    <div class="brk-in">
       <ins class="adsbygoogle"
            style="display:inline-block;width:300px;height:250px"
            data-ad-client="ca-pub-2349356292132712"
            data-ad-slot="5106164625"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-  </div>
+    <p class="brk-note"></p>
+  </aside>
 
+  <section id="problems">
   <div class="tag section-tag">Troubleshooting</div>
-  <h2>The most common problems, and the fast fix.</h2>
-  <ul class="tips-list">
-    <li>
-      <h3>Plosive pops on "P" and "B" sounds</h3>
-      <p>
-        Add or reposition a pop filter, and try speaking slightly across the mic rather than straight
-        into it.
-      </p>
-    </li>
-    <li>
-      <h3>A faint echo or boxy tone</h3>
-      <p>
-        The room, not the mic, is almost always the cause. Add soft furnishings, move away from bare
-        walls and hard corners, or record inside a closet full of clothes as a quick fix.
-      </p>
-    </li>
-    <li>
-      <h3>A constant background hum</h3>
-      <p>
-        Often a ground loop between the interface and other plugged-in electronics. Try a different
-        power outlet, unplug nearby chargers and appliances, and rule out fluorescent lighting or a
-        fridge compressor cycling nearby.
-      </p>
-    </li>
-    <li>
-      <h3>Clipping or crackling on loud peaks</h3>
-      <p>
-        The input gain is set too high. Bring it down until the loudest moment in the take sits
-        comfortably below the red on the meter, then do a quick level check before recording for real.
-      </p>
-    </li>
-    <li>
-      <h3>Levels that jump between takes</h3>
-      <p>
-        Usually a mic distance problem rather than a gain problem. Mark your standing spot with tape
-        on the floor so it's identical take to take.
-      </p>
-    </li>
-    <li>
-      <h3>Mouth clicks and dry-mouth noise</h3>
-      <p>
-        Water at room temperature, an apple slice before a long session, and a short break every
-        twenty minutes or so all help more than most people expect.
-      </p>
-    </li>
-    <li>
-      <h3>Headphone bleed into the recording</h3>
-      <p>
-        Turn the headphone monitor volume down slightly and confirm the cups are sealing fully around
-        the ear, especially with glasses or thick hair in the way.
-      </p>
-    </li>
-  </ul>
+  <h2>Why does my recording sound wrong?</h2>
+  <div class="table-wrap">
+    <table class="stack">
+      <thead><tr><th>What you hear</th><th>Usual cause</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr><td>Thumps on P and B sounds</td><td data-h="Cause">Air hitting the mic</td><td data-h="Fix">Use the pop filter and speak slightly across the mic.</td></tr>
+        <tr><td>A hollow, echoey sound</td><td data-h="Cause">Sound bouncing off hard surfaces</td><td data-h="Fix">Move away from walls and corners, and add soft furnishings. At home, a cupboard full of clothes makes a good booth.</td></tr>
+        <tr><td>Hiss under everything</td><td data-h="Cause">Levels set too low and raised later</td><td data-h="Fix">Set levels with your loudest line, then record again.</td></tr>
+        <tr><td>Crackle or distortion on loud parts</td><td data-h="Cause">Gain set too high, so peaks clip</td><td data-h="Fix">Turn the gain down and record again. Clipping can&rsquo;t be fixed afterwards.</td></tr>
+        <tr><td>A constant hum or buzz</td><td data-h="Cause">Electrical interference</td><td data-h="Fix">Try another plug point, unplug nearby chargers, and move away from fluorescent lights and fridges.</td></tr>
+        <tr><td>Volume that changes between takes</td><td data-h="Cause">Your distance from the mic changed</td><td data-h="Fix">Keep to one spot. Mark it on the floor with tape.</td></tr>
+        <tr><td>Clicks and smacks</td><td data-h="Cause">A dry mouth</td><td data-h="Fix">Sip room-temperature water, eat a slice of apple before a long session, and take regular breaks.</td></tr>
+        <tr><td>Faint music or voice in the background</td><td data-h="Cause">Sound leaking from the headphones</td><td data-h="Fix">Turn the headphones down and check they seal. Glasses and thick hair can break the seal.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </section>
 
-  <!-- ====== Ad Unit 4 &middot; 2827485645 &middot; Display, auto/full-width ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-4" style="min-height:140px;">
+  <aside class="brk" aria-label="Advertisement">
+    <span class="brk-label">Advertisement</span>
+    <div class="brk-in">
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-2349356292132712"
@@ -645,57 +670,30 @@
            data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-  </div>
+    <p class="brk-note"></p>
+  </aside>
 
+  <section id="terms">
   <div class="tag section-tag">Reference</div>
-  <h2>Recording terms, plainly explained.</h2>
-  <ul class="gear-list">
-    <li>
-      <span class="role">Term</span>
-      <h3>DAW (Digital Audio Workstation)</h3>
-      <p>The software used to record, edit and mix audio &mdash; Reaper, Logic, Audacity and Pro Tools are common examples.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Phantom power</h3>
-      <p>A steady 48V supplied by an interface or mixer, required by most condenser microphones to operate at all.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Gain staging</h3>
-      <p>Setting input levels so a signal is strong enough to sound clean, without being so hot that peaks distort.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Sample rate & bit depth</h3>
-      <p>How often (sample rate) and how precisely (bit depth) a digital recording measures the incoming analogue signal. 48kHz/24-bit is a common standard for spoken word and video.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Latency</h3>
-      <p>The small delay between a sound happening and it being heard back through a monitoring system.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Proximity effect</h3>
-      <p>The bass boost that occurs on many directional mics as a speaker moves closer to the capsule.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Self-noise</h3>
-      <p>The faint hiss a microphone itself introduces before any external sound reaches it. Lower is better.</p>
-    </li>
-    <li>
-      <span class="role">Term</span>
-      <h3>Room tone</h3>
-      <p>A short recording of pure silence in a room, used by editors to smooth cuts and clean up noisy sections.</p>
-    </li>
-  </ul>
+  <h2>Recording terms</h2>
+  <dl class="terms">
+    <dt>DAW</dt><dd>Digital audio workstation: the software you record and edit in, such as Reaper, Logic, Audacity or Pro Tools.</dd>
+    <dt>Phantom power</dt><dd>48 volts sent from the interface down the mic cable. Most condenser mics need it.</dd>
+    <dt>Gain</dt><dd>How much the interface boosts the mic&rsquo;s signal. Setting it well is called gain staging.</dd>
+    <dt>Clipping</dt><dd>Distortion when a signal goes past the top of the meter, which can&rsquo;t be fixed afterwards.</dd>
+    <dt>Sample rate</dt><dd>How many times a second the sound is measured, such as 48 kHz.</dd>
+    <dt>Bit depth</dt><dd>How finely each measurement is recorded. 24-bit leaves room to record at safe levels without hiss.</dd>
+    <dt>Latency</dt><dd>The delay between making a sound and hearing it in your headphones.</dd>
+    <dt>Proximity effect</dt><dd>The extra bass most mics add as you move closer.</dd>
+    <dt>Plosive</dt><dd>The burst of air from P and B sounds that thumps into a mic.</dd>
+    <dt>Room tone</dt><dd>A recording of the room with nobody speaking, used to fill gaps in an edit.</dd>
+    <dt>LUFS</dt><dd>A measure of how loud audio sounds to people, used for podcast and streaming targets.</dd>
+  </dl>
+  </section>
 
-  <!-- ====== Ad Unit 5 &middot; 3833480941 &middot; In-article, fluid ====== -->
-  <div class="inline-ad">
-    <span class="ad-label" style="margin-bottom:0.5rem; display:inline-block;">Advertisement</span>
-    <div class="ad-placeholder" id="ad-slot-5" style="min-height:100px;">
+  <aside class="brk" aria-label="Advertisement">
+    <span class="brk-label">Advertisement</span>
+    <div class="brk-in">
       <ins class="adsbygoogle"
            style="display:block; text-align:center;"
            data-ad-layout="in-article"
@@ -704,29 +702,40 @@
            data-ad-slot="3833480941"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-  </div>
+    <p class="brk-note"></p>
+  </aside>
 
-  <div class="closing">
+  <section class="book" aria-labelledby="book-h">
+    <h2 id="book-h">Rather record in a treated booth?</h2>
     <p>
-      This is roughly the setup running in the booth at Didi's House in Kensington B, Randburg: an
-      AKG P220 condenser and Shure SM58 dynamic, an Audient iD14 interface, Audio-Technica ATH-M20X
-      headphones and an Akai MPK Mini for anyone who needs keys. If you'd rather skip assembling any
-      of this yourself, the room is booked by the hour with everything above included &mdash;
-      details are on the <a href="/" style="color:#93b074;">studio's main page</a>.
+      Didi&rsquo;s House is in Kensington B, Randburg. The booth and all the gear on this page cost
+      R700 an hour, or R350 for audiobooks in a South African language. Bring your laptop; everything
+      else is set up when you arrive.
     </p>
-  </div>
+    <div class="btns">
+      <a class="btn btn-fill" href="https://wa.me/27823052664?text=Hi%21%20I%27d%20like%20to%20book%20a%20session%20at%20Didi%27s%20House." target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+      <a class="btn btn-line" href="/#rates">See rates</a>
+    </div>
+  </section>
 
   </article>
 
-  <!-- ====== FOOTNOTE ====== -->
-  <div class="footnote">
-    <span>Didi's House &middot; Kensington B, Randburg</span>
-    <span>
-      <a href="/contact.html">&larr; back to contact page</a> &middot;
-      <a href="/">studio home</a>
-    </span>
-  </div>
+  <footer class="footnote">
+    <p>Didi&rsquo;s House &middot; Kensington B, Randburg. P.S. Didi is the cat.</p>
+    <p><a href="/">Studio</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy</a></p>
+  </footer>
 
-</div> <!-- .wrap -->
+</main>
+
+<script>
+  // One of these per box, no repeats, for visitors who block the ads.
+  (function () {
+    var words = ['useful', 'fun', 'great', 'memorable', 'polished', 'engaging', 'concise'];
+    for (var i = words.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = words[i]; words[i] = words[j]; words[j] = t; }
+    document.querySelectorAll('.brk-note').forEach(function (el, n) {
+      el.textContent = 'This potentially ' + words[n % words.length] + ' ad is being blocked :-|';
+    });
+  })();
+</script>
 </body>
 </html>
